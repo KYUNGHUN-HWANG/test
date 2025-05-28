@@ -473,7 +473,8 @@ void Handle_Sleep_Main(void)
 	{
 		if(Sleep_5second == 1)
 		{
-			Lin_GoTo_WakeUp();
+//			Lin_GoTo_WakeUp();
+			Lin_Init();
 		}
 						
 		Sleep_5second = 0;

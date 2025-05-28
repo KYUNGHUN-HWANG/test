@@ -173,17 +173,17 @@ void Lin_GoTo_Sleep(void)
 
 void Lin_GoTo_WakeUp(void)
 {
-	Lin_Init();
+//	Lin_Init();
 	
-	if(lin_WakeupFlag == true)
-	{	
-//		l_ifc_wake_up(LI0);
-//		l_sch_set(LI0, LI0_SCHEDULER_EVNT_NORMAL_FR_DRV, 0u);
-//		l_ifc_wake_up(LI1);
-//		l_sch_set(LI1, LI1_SCHEDULER_EVNT_NORMAL_FR_PASS, 0u);
+//	if(lin_WakeupFlag == true)
+//	{	
+		l_ifc_wake_up(LI0);
+		l_sch_set(LI0, LI0_SCHEDULER_EVNT_NORMAL_FR_DRV, 0u);
+		l_ifc_wake_up(LI1);
+		l_sch_set(LI1, LI1_SCHEDULER_EVNT_NORMAL_FR_PASS, 0u);
 
-		lin_WakeupFlag = false;
-	}
+//		lin_WakeupFlag = false;
+//	}
 }
 
 #ifdef LIN_BUSOFF_CHECK_DELAY_50MS
@@ -691,7 +691,7 @@ void Lin_Init(void)
 	l_ifc_init(LI2);
 #endif
 
-//	Lin_GoTo_WakeUp();
+	Lin_GoTo_WakeUp();
 
 	/* Set Schedule table to Normal */
 
