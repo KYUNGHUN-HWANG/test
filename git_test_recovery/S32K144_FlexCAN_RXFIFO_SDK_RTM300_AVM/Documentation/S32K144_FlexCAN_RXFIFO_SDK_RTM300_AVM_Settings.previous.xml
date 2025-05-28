@@ -1,0 +1,2299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PE_PROJECT_SETTINGS_DOCUMENTATION>
+  <PE_product_version v="version 10.1 for Internal Usage Only" />
+  <PE_core_version v="Processor Expert Version 0521" />
+  <CPU_Bean name="Cpu" type="S32K144_100">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="Cpu" />
+      <CPU_type v="S32K144_100" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+    </Events>
+    <Compiler v="GNU C Compiler" />
+    <CompilerProperties>
+      <Compiler v="GNU C Compiler" />
+      <boolgroup name="Generate linker file" v="no" />
+    </CompilerProperties>
+  </CPU_Bean>
+  <CPU_Bean name="Cpu" type="S32K144_48">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="Cpu" />
+      <CPU_type v="S32K144_48" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+    </Events>
+    <Compiler v="GNU C Compiler" />
+    <CompilerProperties>
+      <Compiler v="GNU C Compiler" />
+      <boolgroup name="Generate linker file" v="no" />
+    </CompilerProperties>
+  </CPU_Bean>
+  <CPU_Bean name="Cpu" type="S32K144_48">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="Cpu" />
+      <CPU_type v="S32K144_48" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+    </Events>
+    <Compiler v="GNU C Compiler" />
+    <CompilerProperties>
+      <Compiler v="GNU C Compiler" />
+      <boolgroup name="Generate linker file" v="no" />
+    </CompilerProperties>
+  </CPU_Bean>
+  <CPU_Bean name="Cpu" type="S32K144_64">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="Cpu" />
+      <CPU_type v="S32K144_64" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+    </Events>
+    <Compiler v="GNU C Compiler" />
+    <CompilerProperties>
+      <Compiler v="GNU C Compiler" />
+      <boolgroup name="Generate linker file" v="no" />
+    </CompilerProperties>
+  </CPU_Bean>
+  <CPU_Bean name="Cpu" type="S32K144_64">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="Cpu" />
+      <CPU_type v="S32K144_64" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+    </Events>
+    <Compiler v="GNU C Compiler" />
+    <CompilerProperties>
+      <Compiler v="GNU C Compiler" />
+      <boolgroup name="Generate linker file" v="no" />
+    </CompilerProperties>
+  </CPU_Bean>
+  <CPU_Bean name="Cpu" type="S32K144_48">
+    <Enabled v="N" />
+    <Properties>
+      <Component_name v="Cpu" />
+      <CPU_type v="S32K144_48" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+    </Events>
+    <Compiler v="GNU C Compiler" />
+    <CompilerProperties>
+      <Compiler v="GNU C Compiler" />
+      <boolgroup name="Generate linker file" v="no" />
+    </CompilerProperties>
+  </CPU_Bean>
+  <CPU_Bean name="Cpu" type="S32K144_48">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="Cpu" />
+      <CPU_type v="S32K144_48" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+    </Events>
+    <Compiler v="GNU C Compiler" />
+    <CompilerProperties>
+      <Compiler v="GNU C Compiler" />
+      <boolgroup name="Generate linker file" v="no" />
+    </CompilerProperties>
+  </CPU_Bean>
+  <Bean name="pin_mux" type="PinSettings">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="pin_mux" />
+      <PinSettings_IP_Block v="PinSettings" />
+      <Processor v="S32K144_48" />
+      <group name="Settings">
+        <EmptySection_DummyValue />
+      </group>
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="clockMan1" type="clock_manager">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="clockMan1" />
+      <Component_version v="S32_SDK_S32K" />
+      <group name="">
+        <list name="Callbacks" v="1">
+          <boolgroup name="Configuration0" v="Disabled" />
+        </list>
+        <group name="Shared components">
+          <interrupt_manager v="intMan1" />
+        </group>
+      </group>
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="intMan1" type="interrupt_manager">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="intMan1" />
+      <Component_version v="S32K144_SDK01" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="canCom1" type="flexcan">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="canCom1" />
+      <Device v="CAN0" />
+      <Component_version v="S32_SDK_S32K14x" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="dmaController1" type="edma">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="dmaController1" />
+      <Device v="DMA" />
+      <Component_version v="S32_SDK_DMA_16CH" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="osif1" type="osif">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="osif1" />
+      <Component_version v="osifcommon" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="pwrMan1" type="power_manager">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="pwrMan1" />
+      <Component_version v="S32K144_SDK01" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="lpit1" type="lpit">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="lpit1" />
+      <Device v="LPIT0" />
+      <Component_version v="S32K144_SDK01" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="flexio_uart_TX" type="flexio_uart">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="flexio_uart_TX" />
+      <Device v="FLEXIO" />
+      <Component_version v="S32K144_SDK01" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="flexio_uart_RX" type="flexio_uart">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="flexio_uart_RX" />
+      <Device v="FLEXIO" />
+      <Component_version v="S32K144_SDK01" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="watchdog1" type="wdog">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="watchdog1" />
+      <Device v="WDOG" />
+      <Component_version v="S32_SDK" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="lpTmr1" type="lptmr">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="lpTmr1" />
+      <Device v="LPTMR0" />
+      <Component_version v="S32K144_SDK01" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="adConv1" type="adc">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="adConv1" />
+      <Device v="ADC0" />
+      <Component_version v="S32K144_SDK01" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="Flash1" type="flash">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="Flash1" />
+      <Device v="FTFC" />
+      <Component_version v="S32K144_SDK01" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="lin_cfg" type="LinStack">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="lin_cfg" />
+      <group name="Network configuration">
+        <Use_transport_layer v="no" />
+        <Support_diagnostic_service v="no" />
+        <Timeout_unit__us_ v="500" />
+        <list name="List of networks" v="3">
+          <group name="Network detail">
+            <Network_name v="LI0" />
+            <Device v="LPUART0" />
+            <LDF_file v="Sources\ldf\241108_EVNT_Front_LH_LDF_R1_2.ldf" />
+            <Protocol_version v="2.2" />
+            <Node_name v="EVNT" />
+            <Diagnostic v="Class 1" />
+            <Idle_timeout__s_ v="5" />
+            <Max_message_length__bytes_ v="6" />
+            <Autobaud v="no" />
+            <Configuration_name v="lin1_InitConfig0" />
+            <boolgroup name="Supported services" v="yes">
+              <Assign_NAD__0xB0_ v="yes" />
+              <Assign_frame_identifier__0xB1_ v="no" />
+              <Read_by_identifier__0xB2_ v="yes" />
+              <Conditional_change_NAD__0xB3_ v="yes" />
+              <Data_dump__0xB4_ v="yes" />
+              <Save_configuration__0xB6_ v="yes" />
+              <Assign_frame_identifier_range__0xB7_ v="yes" />
+              <Read_data_by_identifier__0x22_ v="no" />
+              <Write_data_by_identifier__0x2E_ v="no" />
+              <Session_control__0x10_ v="no" />
+              <I_O_control_by_identifier__0x2F_ v="no" />
+              <Fault_memory_read__0x19_ v="no" />
+              <Fault_memory_clear__0x14_ v="no" />
+              <Target_reset_service__0xB5_ v="no" />
+              <boolgroup name="User SID supported" v="no" />
+            </boolgroup>
+          </group>
+          <group name="Network detail">
+            <Network_name v="LI1" />
+            <Device v="LPUART1" />
+            <LDF_file v="Sources\ldf\241108_EVNT_Front_RH_LDF_R1_2.ldf" />
+            <Protocol_version v="2.2" />
+            <Node_name v="EVNT" />
+            <Diagnostic v="Class 1" />
+            <Idle_timeout__s_ v="5" />
+            <Max_message_length__bytes_ v="6" />
+            <Autobaud v="no" />
+            <Configuration_name v="lin2_InitConfig0" />
+            <boolgroup name="Supported services" v="yes">
+              <Assign_NAD__0xB0_ v="yes" />
+              <Assign_frame_identifier__0xB1_ v="no" />
+              <Read_by_identifier__0xB2_ v="yes" />
+              <Conditional_change_NAD__0xB3_ v="yes" />
+              <Data_dump__0xB4_ v="yes" />
+              <Save_configuration__0xB6_ v="yes" />
+              <Assign_frame_identifier_range__0xB7_ v="yes" />
+              <Read_data_by_identifier__0x22_ v="no" />
+              <Write_data_by_identifier__0x2E_ v="no" />
+              <Session_control__0x10_ v="no" />
+              <I_O_control_by_identifier__0x2F_ v="no" />
+              <Fault_memory_read__0x19_ v="no" />
+              <Fault_memory_clear__0x14_ v="no" />
+              <Target_reset_service__0xB5_ v="no" />
+              <boolgroup name="User SID supported" v="no" />
+            </boolgroup>
+          </group>
+          <group name="Network detail">
+            <Network_name v="LI2" />
+            <Device v="LPUART2" />
+            <LDF_file v="Sources\ldf\241108_EVNT_Rear_Center_LDF_R1_2.ldf" />
+            <Protocol_version v="2.2" />
+            <Node_name v="EVNT" />
+            <Diagnostic v="Class 1" />
+            <Idle_timeout__s_ v="5" />
+            <Max_message_length__bytes_ v="6" />
+            <Autobaud v="no" />
+            <Configuration_name v="lin3_InitConfig0" />
+            <boolgroup name="Supported services" v="yes">
+              <Assign_NAD__0xB0_ v="yes" />
+              <Assign_frame_identifier__0xB1_ v="no" />
+              <Read_by_identifier__0xB2_ v="yes" />
+              <Conditional_change_NAD__0xB3_ v="yes" />
+              <Data_dump__0xB4_ v="yes" />
+              <Save_configuration__0xB6_ v="yes" />
+              <Assign_frame_identifier_range__0xB7_ v="yes" />
+              <Read_data_by_identifier__0x22_ v="no" />
+              <Write_data_by_identifier__0x2E_ v="no" />
+              <Session_control__0x10_ v="no" />
+              <I_O_control_by_identifier__0x2F_ v="no" />
+              <Fault_memory_read__0x19_ v="no" />
+              <Fault_memory_clear__0x14_ v="no" />
+              <Target_reset_service__0xB5_ v="no" />
+              <boolgroup name="User SID supported" v="no" />
+            </boolgroup>
+          </group>
+        </list>
+      </group>
+      <group name="LIN description file">
+        <_unspecified_item_name_ v="Reload" />
+        <LDF_file_name v="Sources\ldf\241108_EVNT_Rear_Center_LDF_R1_2.ldf" />
+        <boolgroup name="Edit enable" v="yes">
+          <group name="Global definition">
+            <Protocol_version v="2.2" />
+            <Language_version v="2.2" />
+            <Speed__bps_ v="19200" />
+          </group>
+          <group name="Node definition">
+            <group name="Master">
+              <Name v="EVNT" />
+              <Time_base__ms_ v="5" />
+              <Jitter__ms_ v="0.100000000000" />
+            </group>
+            <list name="List of slaves" v="4">
+              <Name0 v="RR_CLLR" />
+              <Name1 v="RR_CLUD" />
+              <Name2 v="RR_CRLR" />
+              <Name3 v="RR_CRUD" />
+            </list>
+          </group>
+          <group name="Signal definition">
+            <list name="List of signals" v="77">
+              <group name="Signal">
+                <Name v="EVNT_ADDr" />
+                <Type v="Scalar" />
+                <Size__bits_ v="7" />
+                <Publisher v="EVNT" />
+                <list name="List of subscribers" v="4">
+                  <Name0 v="RR_CLLR" />
+                  <Name1 v="RR_CLUD" />
+                  <Name2 v="RR_CRLR" />
+                  <Name3 v="RR_CRUD" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="31" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="EVNT_Broad" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="EVNT" />
+                <list name="List of subscribers" v="4">
+                  <Name0 v="RR_CLLR" />
+                  <Name1 v="RR_CLUD" />
+                  <Name2 v="RR_CRLR" />
+                  <Name3 v="RR_CRUD" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="EVNT_REAR_LH_SPEED" />
+                <Type v="Scalar" />
+                <Size__bits_ v="4" />
+                <Publisher v="EVNT" />
+                <list name="List of subscribers" v="2">
+                  <Name0 v="RR_CLLR" />
+                  <Name1 v="RR_CLUD" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="EVNT_REAR_RH_SPEED" />
+                <Type v="Scalar" />
+                <Size__bits_ v="4" />
+                <Publisher v="EVNT" />
+                <list name="List of subscribers" v="2">
+                  <Name0 v="RR_CRLR" />
+                  <Name1 v="RR_CRUD" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="EVNT_CMD" />
+                <Type v="Scalar" />
+                <Size__bits_ v="8" />
+                <Publisher v="EVNT" />
+                <list name="List of subscribers" v="4">
+                  <Name0 v="RR_CLLR" />
+                  <Name1 v="RR_CLUD" />
+                  <Name2 v="RR_CRLR" />
+                  <Name3 v="RR_CRUD" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="85" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="EVNT_Rear_Center_LH_LeftRight_TargetPosition" />
+                <Type v="Scalar" />
+                <Size__bits_ v="11" />
+                <Publisher v="EVNT" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="RR_CLLR" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="EVNT_Rear_Center_LH_UpDown_TargetPosition" />
+                <Type v="Scalar" />
+                <Size__bits_ v="11" />
+                <Publisher v="EVNT" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="RR_CLUD" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="EVNT_Rear_Center_RH_LeftRight_TargetPosition" />
+                <Type v="Scalar" />
+                <Size__bits_ v="11" />
+                <Publisher v="EVNT" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="RR_CRLR" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="EVNT_Rear_Center_RH_UpDown_TargetPosition" />
+                <Type v="Scalar" />
+                <Size__bits_ v="11" />
+                <Publisher v="EVNT" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="RR_CRUD" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_SPEED" />
+                <Type v="Scalar" />
+                <Size__bits_ v="4" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_OpDone" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_STATE" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_ActuatorState" />
+                <Type v="Scalar" />
+                <Size__bits_ v="11" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_VddReset" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_Steploss" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_EIDef" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_TSD" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_TW" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_Tinfo" />
+                <Type v="Scalar" />
+                <Size__bits_ v="2" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_Sensor" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_OV" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_UV" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_OPEN2" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_OPEN1" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_OVC2" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLLR_OVC1" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_SPEED" />
+                <Type v="Scalar" />
+                <Size__bits_ v="4" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_OpDone" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_STATE" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_ActuatorState" />
+                <Type v="Scalar" />
+                <Size__bits_ v="11" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_VddReset" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_Steploss" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_EIDef" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_TSD" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_TW" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_Tinfo" />
+                <Type v="Scalar" />
+                <Size__bits_ v="2" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_Sensor" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_OV" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_UV" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_OPEN2" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_OPEN1" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_OVC2" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRLR_OVC1" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRLR" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_SPEED" />
+                <Type v="Scalar" />
+                <Size__bits_ v="4" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_OpDone" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_STATE" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_ActuatorState" />
+                <Type v="Scalar" />
+                <Size__bits_ v="11" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_VddReset" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_Steploss" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_EIDef" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_TSD" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_TW" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_Tinfo" />
+                <Type v="Scalar" />
+                <Size__bits_ v="2" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_Sensor" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_OV" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_UV" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_OPEN2" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_OPEN1" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_OVC2" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CLUD_OVC1" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CLUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_SPEED" />
+                <Type v="Scalar" />
+                <Size__bits_ v="4" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_OpDone" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_STATE" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_ActuatorState" />
+                <Type v="Scalar" />
+                <Size__bits_ v="11" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_VddReset" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_Steploss" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_EIDef" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_TSD" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_TW" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_Tinfo" />
+                <Type v="Scalar" />
+                <Size__bits_ v="2" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_Sensor" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_OV" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_UV" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_OPEN2" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_OPEN1" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_OVC2" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+              <group name="Signal">
+                <Name v="RR_CRUD_OVC1" />
+                <Type v="Scalar" />
+                <Size__bits_ v="1" />
+                <Publisher v="RR_CRUD" />
+                <list name="List of subscribers" v="1">
+                  <Name0 v="EVNT" />
+                </list>
+                <list name="Init value" v="1">
+                  <group name="Init value">
+                    <Value v="0" />
+                  </group>
+                </list>
+              </group>
+            </list>
+          </group>
+          <group name="Unconditional frame definition">
+            <list name="List of unconditional frames" v="6">
+              <group name="Unconditional frame">
+                <Name v="EVNT_MASTER_COMMAND" />
+                <ID v="49" />
+                <ID_HEX v="49" />
+                <PID v="177" />
+                <Publisher v="EVNT" />
+                <Size__bytes_ v="8" />
+                <list name="List of signals" v="8">
+                  <group name="Signal List">
+                    <Name v="EVNT_ADDr" />
+                    <Size__bits_ v="7" />
+                    <Offset__bit_ v="0" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="EVNT_Broad" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="7" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="EVNT_REAR_RH_SPEED" />
+                    <Size__bits_ v="4" />
+                    <Offset__bit_ v="8" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="EVNT_REAR_LH_SPEED" />
+                    <Size__bits_ v="4" />
+                    <Offset__bit_ v="12" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="EVNT_Rear_Center_LH_LeftRight_TargetPosition" />
+                    <Size__bits_ v="11" />
+                    <Offset__bit_ v="16" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="EVNT_Rear_Center_LH_UpDown_TargetPosition" />
+                    <Size__bits_ v="11" />
+                    <Offset__bit_ v="29" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="EVNT_Rear_Center_RH_LeftRight_TargetPosition" />
+                    <Size__bits_ v="11" />
+                    <Offset__bit_ v="40" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="EVNT_Rear_Center_RH_UpDown_TargetPosition" />
+                    <Size__bits_ v="11" />
+                    <Offset__bit_ v="53" />
+                  </group>
+                </list>
+              </group>
+              <group name="Unconditional frame">
+                <Name v="RR_CLLR_STATUS" />
+                <ID v="50" />
+                <ID_HEX v="50" />
+                <PID v="50" />
+                <Publisher v="RR_CLLR" />
+                <Size__bytes_ v="4" />
+                <list name="List of signals" v="17">
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_SPEED" />
+                    <Size__bits_ v="4" />
+                    <Offset__bit_ v="0" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_ActuatorState" />
+                    <Size__bits_ v="11" />
+                    <Offset__bit_ v="5" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_OpDone" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="16" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_VddReset" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="17" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_Steploss" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="18" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_EIDef" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="19" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_TSD" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="20" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_TW" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="21" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_Tinfo" />
+                    <Size__bits_ v="2" />
+                    <Offset__bit_ v="22" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_STATE" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="24" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_Sensor" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="25" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_OV" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="26" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_UV" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="27" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_OPEN2" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="28" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_OPEN1" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="29" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_OVC2" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="30" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLLR_OVC1" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="31" />
+                  </group>
+                </list>
+              </group>
+              <group name="Unconditional frame">
+                <Name v="RR_CLUD_STATUS" />
+                <ID v="51" />
+                <ID_HEX v="51" />
+                <PID v="115" />
+                <Publisher v="RR_CLUD" />
+                <Size__bytes_ v="4" />
+                <list name="List of signals" v="17">
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_SPEED" />
+                    <Size__bits_ v="4" />
+                    <Offset__bit_ v="0" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_ActuatorState" />
+                    <Size__bits_ v="11" />
+                    <Offset__bit_ v="5" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_OpDone" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="16" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_VddReset" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="17" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_Steploss" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="18" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_EIDef" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="19" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_TSD" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="20" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_TW" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="17" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_Tinfo" />
+                    <Size__bits_ v="2" />
+                    <Offset__bit_ v="22" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_STATE" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="24" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_Sensor" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="25" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_OV" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="26" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_UV" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="27" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_OPEN2" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="28" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_OPEN1" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="29" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_OVC2" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="30" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CLUD_OVC1" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="31" />
+                  </group>
+                </list>
+              </group>
+              <group name="Unconditional frame">
+                <Name v="RR_CRLR_STATUS" />
+                <ID v="52" />
+                <ID_HEX v="52" />
+                <PID v="180" />
+                <Publisher v="RR_CRLR" />
+                <Size__bytes_ v="4" />
+                <list name="List of signals" v="17">
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_SPEED" />
+                    <Size__bits_ v="4" />
+                    <Offset__bit_ v="0" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_ActuatorState" />
+                    <Size__bits_ v="11" />
+                    <Offset__bit_ v="5" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_OpDone" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="16" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_VddReset" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="17" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_Steploss" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="18" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_EIDef" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="19" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_TSD" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="20" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_TW" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="21" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_Tinfo" />
+                    <Size__bits_ v="2" />
+                    <Offset__bit_ v="22" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_STATE" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="24" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_Sensor" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="25" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_OV" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="26" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_UV" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="27" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_OPEN2" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="28" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_OPEN1" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="29" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_OVC2" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="30" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRLR_OVC1" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="31" />
+                  </group>
+                </list>
+              </group>
+              <group name="Unconditional frame">
+                <Name v="RR_CRUD_STATUS" />
+                <ID v="53" />
+                <ID_HEX v="53" />
+                <PID v="245" />
+                <Publisher v="RR_CRUD" />
+                <Size__bytes_ v="4" />
+                <list name="List of signals" v="17">
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_SPEED" />
+                    <Size__bits_ v="4" />
+                    <Offset__bit_ v="0" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_ActuatorState" />
+                    <Size__bits_ v="11" />
+                    <Offset__bit_ v="5" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_OpDone" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="16" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_VddReset" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="17" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_Steploss" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="18" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_EIDef" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="19" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_TSD" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="20" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_TW" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="21" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_Tinfo" />
+                    <Size__bits_ v="2" />
+                    <Offset__bit_ v="22" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_STATE" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="24" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_Sensor" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="25" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_OV" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="26" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_UV" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="27" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_OPEN2" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="28" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_OPEN1" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="29" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_OVC2" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="30" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="RR_CRUD_OVC1" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="31" />
+                  </group>
+                </list>
+              </group>
+              <group name="Unconditional frame">
+                <Name v="EVNT_SPECIAL_COMMAND" />
+                <ID v="0" />
+                <ID_HEX v="0" />
+                <PID v="128" />
+                <Publisher v="EVNT" />
+                <Size__bytes_ v="2" />
+                <list name="List of signals" v="3">
+                  <group name="Signal List">
+                    <Name v="EVNT_CMD" />
+                    <Size__bits_ v="8" />
+                    <Offset__bit_ v="0" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="EVNT_Broad" />
+                    <Size__bits_ v="1" />
+                    <Offset__bit_ v="8" />
+                  </group>
+                  <group name="Signal List">
+                    <Name v="EVNT_ADDr" />
+                    <Size__bits_ v="7" />
+                    <Offset__bit_ v="9" />
+                  </group>
+                </list>
+              </group>
+            </list>
+          </group>
+          <group name="Event triggered frame definition">
+            <list name="List of event triggered frames" v="0">
+              <EmptySection_DummyValue />
+            </list>
+          </group>
+          <group name="Sporadic frame definition">
+            <list name="List of sporadic frames" v="0">
+              <EmptySection_DummyValue />
+            </list>
+          </group>
+          <group name="Node attribute definition">
+            <list name="List of node attributes" v="4">
+              <group name="Node Attribute">
+                <Name v="RR_CLLR" />
+                <Protocol v="2.2" />
+                <Configured_NAD v="49" />
+                <Initial_NAD v="49" />
+                <group name="Product ID">
+                  <Supplier_ID v="277" />
+                  <Function_ID v="4352" />
+                  <Variant_ID v="255" />
+                </group>
+                <Serial_0 v="1" />
+                <Serial_1 v="1" />
+                <Serial_2 v="1" />
+                <Serial_3 v="1" />
+                <Response_error v="RR_CLLR_STATE" />
+                <P2_min__ms_ v="50" />
+                <ST_min__ms_ v="0" />
+                <boolgroup name="LIN 2.1, 2.2, 2.2A protocol" v="yes">
+                  <N_As_timeout__ms_ v="1000" />
+                  <N_Cr_timeout__ms_ v="1000" />
+                </boolgroup>
+                <list name="List of frames" v="3">
+                  <group name="Frame">
+                    <Name v="EVNT_MASTER_COMMAND" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                  <group name="Frame">
+                    <Name v="RR_CLLR_STATUS" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                  <group name="Frame">
+                    <Name v="EVNT_SPECIAL_COMMAND" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                </list>
+              </group>
+              <group name="Node Attribute">
+                <Name v="RR_CLUD" />
+                <Protocol v="2.2" />
+                <Configured_NAD v="50" />
+                <Initial_NAD v="50" />
+                <group name="Product ID">
+                  <Supplier_ID v="277" />
+                  <Function_ID v="4352" />
+                  <Variant_ID v="255" />
+                </group>
+                <Serial_0 v="1" />
+                <Serial_1 v="1" />
+                <Serial_2 v="1" />
+                <Serial_3 v="1" />
+                <Response_error v="RR_CLUD_STATE" />
+                <P2_min__ms_ v="50" />
+                <ST_min__ms_ v="0" />
+                <boolgroup name="LIN 2.1, 2.2, 2.2A protocol" v="yes">
+                  <N_As_timeout__ms_ v="1000" />
+                  <N_Cr_timeout__ms_ v="1000" />
+                </boolgroup>
+                <list name="List of frames" v="3">
+                  <group name="Frame">
+                    <Name v="EVNT_MASTER_COMMAND" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                  <group name="Frame">
+                    <Name v="RR_CLUD_STATUS" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                  <group name="Frame">
+                    <Name v="EVNT_SPECIAL_COMMAND" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                </list>
+              </group>
+              <group name="Node Attribute">
+                <Name v="RR_CRLR" />
+                <Protocol v="2.2" />
+                <Configured_NAD v="51" />
+                <Initial_NAD v="51" />
+                <group name="Product ID">
+                  <Supplier_ID v="277" />
+                  <Function_ID v="4352" />
+                  <Variant_ID v="255" />
+                </group>
+                <Serial_0 v="1" />
+                <Serial_1 v="1" />
+                <Serial_2 v="1" />
+                <Serial_3 v="1" />
+                <Response_error v="RR_CRLR_STATE" />
+                <P2_min__ms_ v="50" />
+                <ST_min__ms_ v="0" />
+                <boolgroup name="LIN 2.1, 2.2, 2.2A protocol" v="yes">
+                  <N_As_timeout__ms_ v="1000" />
+                  <N_Cr_timeout__ms_ v="1000" />
+                </boolgroup>
+                <list name="List of frames" v="3">
+                  <group name="Frame">
+                    <Name v="EVNT_MASTER_COMMAND" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                  <group name="Frame">
+                    <Name v="RR_CRLR_STATUS" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                  <group name="Frame">
+                    <Name v="EVNT_SPECIAL_COMMAND" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                </list>
+              </group>
+              <group name="Node Attribute">
+                <Name v="RR_CRUD" />
+                <Protocol v="2.2" />
+                <Configured_NAD v="52" />
+                <Initial_NAD v="52" />
+                <group name="Product ID">
+                  <Supplier_ID v="277" />
+                  <Function_ID v="4352" />
+                  <Variant_ID v="255" />
+                </group>
+                <Serial_0 v="1" />
+                <Serial_1 v="1" />
+                <Serial_2 v="1" />
+                <Serial_3 v="1" />
+                <Response_error v="RR_CRUD_STATE" />
+                <P2_min__ms_ v="50" />
+                <ST_min__ms_ v="0" />
+                <boolgroup name="LIN 2.1, 2.2, 2.2A protocol" v="yes">
+                  <N_As_timeout__ms_ v="1000" />
+                  <N_Cr_timeout__ms_ v="1000" />
+                </boolgroup>
+                <list name="List of frames" v="3">
+                  <group name="Frame">
+                    <Name v="EVNT_MASTER_COMMAND" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                  <group name="Frame">
+                    <Name v="RR_CRUD_STATUS" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                  <group name="Frame">
+                    <Name v="EVNT_SPECIAL_COMMAND" />
+                    <boolgroup name="LIN J2602 protocol" v="no" />
+                  </group>
+                </list>
+              </group>
+            </list>
+          </group>
+          <group name="Schedule table definition">
+            <list name="List of schedule tables" v="4">
+              <group name="Schedule table definition">
+                <Name v="SCHEDULER_EVNT_NORMAL_RR_CTR" />
+                <list name="Number of frames" v="5">
+                  <group name="Schedule table item detail">
+                    <Schedule_table_item_type v="Frame" />
+                  </group>
+                  <group name="Schedule table item detail">
+                    <Schedule_table_item_type v="Frame" />
+                  </group>
+                  <group name="Schedule table item detail">
+                    <Schedule_table_item_type v="Frame" />
+                  </group>
+                  <group name="Schedule table item detail">
+                    <Schedule_table_item_type v="Frame" />
+                  </group>
+                  <group name="Schedule table item detail">
+                    <Schedule_table_item_type v="Frame" />
+                  </group>
+                </list>
+              </group>
+              <group name="Schedule table definition">
+                <Name v="SCHEDULER_EVNT_SPECIAL_CMD_RR_CTR" />
+                <list name="Number of frames" v="2">
+                  <group name="Schedule table item detail">
+                    <Schedule_table_item_type v="Frame" />
+                  </group>
+                  <group name="Schedule table item detail">
+                    <Schedule_table_item_type v="Frame" />
+                  </group>
+                </list>
+              </group>
+              <group name="Schedule table definition">
+                <Name v="Diag_request" />
+                <list name="Number of frames" v="1">
+                  <group name="Schedule table item detail">
+                    <Schedule_table_item_type v="Frame" />
+                  </group>
+                </list>
+              </group>
+              <group name="Schedule table definition">
+                <Name v="Diag_response" />
+                <list name="Number of frames" v="1">
+                  <group name="Schedule table item detail">
+                    <Schedule_table_item_type v="Frame" />
+                  </group>
+                </list>
+              </group>
+            </list>
+          </group>
+        </boolgroup>
+      </group>
+      <group name="Shared components">
+        <clock_manager v="clockMan1" />
+        <interrupt_manager v="intMan1" />
+      </group>
+      <group name="Inherited components">
+        <list name="List of Inherited Components" v="3">
+          <group name="InheritedList0">
+            <inhrbean type="lin">
+              <Enabled v="Y" />
+              <Properties>
+                <Component_name v="lin1" />
+                <Device v="LPUART0" />
+                <Component_version v="S32_SDK" />
+              </Properties>
+              <Methods>
+                <EmptySection_DummyValue />
+              </Methods>
+              <Events>
+                <EmptySection_DummyValue />
+              </Events>
+            </inhrbean>
+            <Network_name v="LI0" />
+          </group>
+          <group name="InheritedList1">
+            <inhrbean type="lin">
+              <Enabled v="Y" />
+              <Properties>
+                <Component_name v="lin2" />
+                <Device v="LPUART1" />
+                <Component_version v="S32_SDK" />
+              </Properties>
+              <Methods>
+                <EmptySection_DummyValue />
+              </Methods>
+              <Events>
+                <EmptySection_DummyValue />
+              </Events>
+            </inhrbean>
+            <Network_name v="LI1" />
+          </group>
+          <group name="InheritedList2">
+            <inhrbean type="lin">
+              <Enabled v="Y" />
+              <Properties>
+                <Component_name v="lin3" />
+                <Device v="LPUART2" />
+                <Component_version v="S32_SDK" />
+              </Properties>
+              <Methods>
+                <EmptySection_DummyValue />
+              </Methods>
+              <Events>
+                <EmptySection_DummyValue />
+              </Events>
+            </inhrbean>
+            <Network_name v="LI2" />
+          </group>
+        </list>
+      </group>
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="Flash1" type="flash">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="Flash1" />
+      <Device v="FTFC" />
+      <Component_version v="S32K144_SDK01" />
+    </Properties>
+    <Methods>
+      <EmptySection_DummyValue />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+</PE_PROJECT_SETTINGS_DOCUMENTATION>
+

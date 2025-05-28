@@ -1,0 +1,852 @@
+/*---------GLOBAL DEFINITIONS-----------*/
+LIN_description_file;
+LIN_protocol_version             = "2.1";
+LIN_language_version             = "2.1";
+LIN_speed                        = 19.2 kbps;
+/* ----------NODE DEFINITIONS---------- */
+Nodes {
+   Master:
+      ECC,                                                   /* Master node name */
+      5 ms,                                                  /* Time base */
+      0.1 ms;                                                /* Jitter */
+   Slaves:
+      AVS_FDLH,
+      AVS_FDLV,
+      AVS_FDRH,
+      AVS_FDRV,
+      AVS_FPLH,
+      AVS_FPLV,
+      AVS_FPRH,
+      AVS_FPRV,
+      AVS_RLH,
+      AVS_RLV,
+      AVS_RRH,
+      AVS_RRV;
+}
+/* ----------SIGNAL DEFINITIONS---------- */
+Signals {
+   /* Signal_name                : Size,                              Init,            Publisher, Subscriber(s) */
+   Vent_Present_FDLH_Stat        :  2,                                0x00,             AVS_FDLH, ECC;
+   Vent_Present_FDLV_Stat        :  2,                                0x00,             AVS_FDLV, ECC;
+   Vent_Present_FDRH_Stat        :  2,                                0x00,             AVS_FDRH, ECC;
+   Vent_Present_FDRV_Stat        :  2,                                0x00,             AVS_FDRV, ECC;
+   Vent_Present_FPLH_Stat        :  2,                                0x00,             AVS_FPLH, ECC;
+   Vent_Present_FPLV_Stat        :  2,                                0x00,             AVS_FPLV, ECC;
+   Vent_Present_FPRH_Stat        :  2,                                0x00,             AVS_FPRH, ECC;
+   Vent_Present_FPRV_Stat        :  2,                                0x00,             AVS_FPRV, ECC;
+   Vent_Present_RLH_Stat         :  2,                                0x00,              AVS_RLH, ECC;
+   Vent_Present_RLV_Stat         :  2,                                0x00,              AVS_RLV, ECC;
+   Vent_Present_RRH_Stat         :  2,                                0x00,              AVS_RRH, ECC;
+   Vent_Present_RRV_Stat         :  2,                                0x00,              AVS_RRV, ECC;
+   CmdIgnSts_FDLH                :  3,                                0x07,                  ECC, AVS_FDLH;
+   CmdIgnSts_FDLV                :  3,                                0x07,                  ECC, AVS_FDLV;
+   CmdIgnSts_FDRH                :  3,                                0x07,                  ECC, AVS_FDRH;
+   CmdIgnSts_FDRV                :  3,                                0x07,                  ECC, AVS_FDRV;
+   CmdIgnSts_FPLH                :  3,                                0x07,                  ECC, AVS_FPLH;
+   CmdIgnSts_FPLV                :  3,                                0x07,                  ECC, AVS_FPLV;
+   CmdIgnSts_FPRH                :  3,                                0x07,                  ECC, AVS_FPRH;
+   CmdIgnSts_FPRV                :  3,                                0x07,                  ECC, AVS_FPRV;
+   CmdIgnSts_RLH                 :  3,                                0x07,                  ECC, AVS_RLH;
+   CmdIgnSts_RLV                 :  3,                                0x07,                  ECC, AVS_RLV;
+   CmdIgnSts_RRH                 :  3,                                0x07,                  ECC, AVS_RRH;
+   CmdIgnSts_RRV                 :  3,                                0x07,                  ECC, AVS_RRV;
+   CmdIgnSts_FDLH_Stat           :  3,                                0x07,             AVS_FDLH, ECC;
+   CmdIgnSts_FDLV_Stat           :  3,                                0x07,             AVS_FDLV, ECC;
+   CmdIgnSts_FDRH_Stat           :  3,                                0x07,             AVS_FDRH, ECC;
+   CmdIgnSts_FDRV_Stat           :  3,                                0x07,             AVS_FDRV, ECC;
+   CmdIgnSts_FPLH_Stat           :  3,                                0x07,             AVS_FPLH, ECC;
+   CmdIgnSts_FPLV_Stat           :  3,                                0x07,             AVS_FPLV, ECC;
+   CmdIgnSts_FPRH_Stat           :  3,                                0x07,             AVS_FPRH, ECC;
+   CmdIgnSts_FPRV_Stat           :  3,                                0x07,             AVS_FPRV, ECC;
+   CmdIgnSts_RLH_Stat            :  3,                                0x07,              AVS_RLH, ECC;
+   CmdIgnSts_RLV_Stat            :  3,                                0x07,              AVS_RLV, ECC;
+   CmdIgnSts_RRH_Stat            :  3,                                0x07,              AVS_RRH, ECC;
+   CmdIgnSts_RRV_Stat            :  3,                                0x07,              AVS_RRV, ECC;
+   Fault_BLDC_FDLH_Stat          :  3,                                0x00,             AVS_FDLH, ECC;
+   Fault_BLDC_FDLV_Stat          :  3,                                0x00,             AVS_FDLV, ECC;
+   Fault_BLDC_FDRH_Stat          :  3,                                0x00,             AVS_FDRH, ECC;
+   Fault_BLDC_FDRV_Stat          :  3,                                0x00,             AVS_FDRV, ECC;
+   Fault_BLDC_FPLH_Stat          :  3,                                0x00,             AVS_FPLH, ECC;
+   Fault_BLDC_FPLV_Stat          :  3,                                0x00,             AVS_FPLV, ECC;
+   Fault_BLDC_FPRH_Stat          :  3,                                0x00,             AVS_FPRH, ECC;
+   Fault_BLDC_FPRV_Stat          :  3,                                0x00,             AVS_FPRV, ECC;
+   Fault_BLDC_RLH_Stat           :  3,                                0x00,              AVS_RLH, ECC;
+   Fault_BLDC_RLV_Stat           :  3,                                0x00,              AVS_RLV, ECC;
+   Fault_BLDC_RRH_Stat           :  3,                                0x00,              AVS_RRH, ECC;
+   Fault_BLDC_RRV_Stat           :  3,                                0x00,              AVS_RRV, ECC;
+   BLDC_RPM_FDLH                 : 12,                              0x0DAC,                  ECC, AVS_FDLH;
+   BLDC_RPM_FDLV                 : 12,                              0x0DAC,                  ECC, AVS_FDLV;
+   BLDC_RPM_FDRH                 : 12,                              0x0DAC,                  ECC, AVS_FDRH;
+   BLDC_RPM_FDRV                 : 12,                              0x0DAC,                  ECC, AVS_FDRV;
+   BLDC_RPM_FPLH                 : 12,                              0x0DAC,                  ECC, AVS_FPLH;
+   BLDC_RPM_FPLV                 : 12,                              0x0DAC,                  ECC, AVS_FPLV;
+   BLDC_RPM_FPRH                 : 12,                              0x0DAC,                  ECC, AVS_FPRH;
+   BLDC_RPM_FPRV                 : 12,                              0x0DAC,                  ECC, AVS_FPRV;
+   BLDC_RPM_RLH                  : 12,                              0x0DAC,                  ECC, AVS_RLH;
+   BLDC_RPM_RRH                  : 12,                              0x0DAC,                  ECC, AVS_RRH;
+   BLDC_RPM_RRV                  : 12,                              0x0DAC,                  ECC, AVS_RRV;
+   BLDC_RPM_RLV                  : 12,                              0x0DAC,                  ECC, AVS_RLV;
+   H_ANGLE_FDLH                  :  8,                                0x23,                  ECC, AVS_FDLH;
+   H_ANGLE_FDLV                  :  8,                                0x23,                  ECC, AVS_FDLV;
+   H_ANGLE_FDRH                  :  8,                                0x23,                  ECC, AVS_FDRH;
+   H_ANGLE_FDRV                  :  8,                                0x23,                  ECC, AVS_FDRV;
+   H_ANGLE_FPLH                  :  8,                                0x23,                  ECC, AVS_FPLH;
+   H_ANGLE_FPLV                  :  8,                                0x23,                  ECC, AVS_FPLV;
+   H_ANGLE_FPRH                  :  8,                                0x23,                  ECC, AVS_FPRH;
+   H_ANGLE_FPRV                  :  8,                                0x23,                  ECC, AVS_FPRV;
+   H_ANGLE_RLH                   :  8,                                0x23,                  ECC, AVS_RLH;
+   H_ANGLE_RLV                   :  8,                                0x23,                  ECC, AVS_RLV;
+   H_ANGLE_RRH                   :  8,                                0x23,                  ECC, AVS_RRH;
+   H_ANGLE_RRV                   :  8,                                0x23,                  ECC, AVS_RRV;
+   V_ANGLE_FDLH                  :  8,                                0x19,                  ECC, AVS_FDLH;
+   V_ANGLE_FDLV                  :  8,                                0x19,                  ECC, AVS_FDLV;
+   V_ANGLE_FDRH                  :  8,                                0x19,                  ECC, AVS_FDRH;
+   V_ANGLE_FDRV                  :  8,                                0x19,                  ECC, AVS_FDRV;
+   V_ANGLE_FPLH                  :  8,                                0x19,                  ECC, AVS_FPLH;
+   V_ANGLE_FPLV                  :  8,                                0x19,                  ECC, AVS_FPLV;
+   V_ANGLE_FPRH                  :  8,                                0x19,                  ECC, AVS_FPRH;
+   V_ANGLE_FPRV                  :  8,                                0x19,                  ECC, AVS_FPRV;
+   V_ANGLE_RLH                   :  8,                                0x19,                  ECC, AVS_RLH;
+   V_ANGLE_RLV                   :  8,                                0x19,                  ECC, AVS_RLV;
+   V_ANGLE_RRH                   :  8,                                0x19,                  ECC, AVS_RRH;
+   V_ANGLE_RRV                   :  8,                                0x19,                  ECC, AVS_RRV;
+   BLDC_RPM_FDLH_Stat            : 12,                              0x0DAC,             AVS_FDLH, ECC;
+   BLDC_RPM_FDLV_Stat            : 12,                              0x0DAC,             AVS_FDLV, ECC;
+   BLDC_RPM_FDRH_Stat            : 12,                              0x0DAC,             AVS_FDRH, ECC;
+   BLDC_RPM_FDRV_Stat            : 12,                              0x0DAC,             AVS_FDRV, ECC;
+   BLDC_RPM_FPLH_Stat            : 12,                              0x0DAC,             AVS_FPLH, ECC;
+   BLDC_RPM_FPLV_Stat            : 12,                              0x0DAC,             AVS_FPLV, ECC;
+   BLDC_RPM_FPRH_Stat            : 12,                              0x0DAC,             AVS_FPRH, ECC;
+   BLDC_RPM_FPRV_Stat            : 12,                              0x0DAC,             AVS_FPRV, ECC;
+   BLDC_RPM_RLH_Stat             : 12,                              0x0DAC,              AVS_RLH, ECC;
+   BLDC_RPM_RRH_Stat             : 12,                              0x0DAC,              AVS_RRH, ECC;
+   BLDC_RPM_RRV_Stat             : 12,                              0x0DAC,              AVS_RRV, ECC;
+   BLDC_RPM_RLV_Stat             : 12,                              0x0DAC,              AVS_RLV, ECC;
+   H_ANGLE_FDLH_Stat             :  8,                                0x23,             AVS_FDLH, ECC;
+   H_ANGLE_FDLV_Stat             :  8,                                0x23,             AVS_FDLV, ECC;
+   H_ANGLE_FDRH_Stat             :  8,                                0x23,             AVS_FDRH, ECC;
+   H_ANGLE_FDRV_Stat             :  8,                                0x23,             AVS_FDRV, ECC;
+   H_ANGLE_FPLH_Stat             :  8,                                0x23,             AVS_FPLH, ECC;
+   H_ANGLE_FPLV_Stat             :  8,                                0x23,             AVS_FPLV, ECC;
+   H_ANGLE_FPRH_Stat             :  8,                                0x23,             AVS_FPRH, ECC;
+   H_ANGLE_FPRV_Stat             :  8,                                0x23,             AVS_FPRV, ECC;
+   H_ANGLE_RLH_Stat              :  8,                                0x23,              AVS_RLH, ECC;
+   H_ANGLE_RLV_Stat              :  8,                                0x23,              AVS_RLV, ECC;
+   H_ANGLE_RRH_Stat              :  8,                                0x23,              AVS_RRH, ECC;
+   H_ANGLE_RRV_Stat              :  8,                                0x23,              AVS_RRV, ECC;
+   V_ANGLE_FDLH_Stat             :  8,                                0x19,             AVS_FDLH, ECC;
+   V_ANGLE_FDLV_Stat             :  8,                                0x19,             AVS_FDLV, ECC;
+   V_ANGLE_FDRH_Stat             :  8,                                0x19,             AVS_FDRH, ECC;
+   V_ANGLE_FDRV_Stat             :  8,                                0x19,             AVS_FDRV, ECC;
+   V_ANGLE_FPLH_Stat             :  8,                                0x19,             AVS_FPLH, ECC;
+   V_ANGLE_FPLV_Stat             :  8,                                0x19,             AVS_FPLV, ECC;
+   V_ANGLE_FPRH_Stat             :  8,                                0x19,             AVS_FPRH, ECC;
+   V_ANGLE_FPRV_Stat             :  8,                                0x19,             AVS_FPRV, ECC;
+   V_ANGLE_RLH_Stat              :  8,                                0x19,              AVS_RLH, ECC;
+   V_ANGLE_RLV_Stat              :  8,                                0x19,              AVS_RLV, ECC;
+   V_ANGLE_RRH_Stat              :  8,                                0x19,              AVS_RRH, ECC;
+   V_ANGLE_RRV_Stat              :  8,                                0x19,              AVS_RRV, ECC;
+   Current_FDLH_Stat             :  8,                                0x00,             AVS_FDLH, ECC;
+   Current_FDLV_Stat             :  8,                                0x00,             AVS_FDLV, ECC;
+   Current_FDRH_Stat             :  8,                                0x00,             AVS_FDRH, ECC;
+   Current_FDRV_Stat             :  8,                                0x00,             AVS_FDRV, ECC;
+   Current_FPLH_Stat             :  8,                                0x00,             AVS_FPLH, ECC;
+   Current_FPLV_Stat             :  8,                                0x00,             AVS_FPLV, ECC;
+   Current_FPRH_Stat             :  8,                                0x00,             AVS_FPRH, ECC;
+   Current_FPRV_Stat             :  8,                                0x00,             AVS_FPRV, ECC;
+   Current_RLH_Stat              :  8,                                0x00,              AVS_RLH, ECC;
+   Current_RLV_Stat              :  8,                                0x00,              AVS_RLV, ECC;
+   Current_RRH_Stat              :  8,                                0x00,              AVS_RRH, ECC;
+   Current_RRV_Stat              :  8,                                0x00,              AVS_RRV, ECC;
+   Voltage_FDLH_Stat             :  8,                                0x00,             AVS_FDLH, ECC;
+   Voltage_FDLV_Stat             :  8,                                0x00,             AVS_FDLV, ECC;
+   Voltage_FDRH_Stat             :  8,                                0x00,             AVS_FDRH, ECC;
+   Voltage_FDRV_Stat             :  8,                                0x00,             AVS_FDRV, ECC;
+   Voltage_FPLH_Stat             :  8,                                0x00,             AVS_FPLH, ECC;
+   Voltage_FPLV_Stat             :  8,                                0x00,             AVS_FPLV, ECC;
+   Voltage_FPRH_Stat             :  8,                                0x00,             AVS_FPRH, ECC;
+   Voltage_FPRV_Stat             :  8,                                0x00,             AVS_FPRV, ECC;
+   Voltage_RLH_Stat              :  8,                                0x00,              AVS_RLH, ECC;
+   Voltage_RLV_Stat              :  8,                                0x00,              AVS_RLV, ECC;
+   Voltage_RRH_Stat              :  8,                                0x00,              AVS_RRH, ECC;
+   Voltage_RRV_Stat              :  8,                                0x00,              AVS_RRV, ECC;
+   Temp_FDLH_Stat                :  7,                                0x19,             AVS_FDLH, ECC;
+   Temp_FDLV_Stat                :  7,                                0x19,             AVS_FDLV, ECC;
+   Temp_FDRH_Stat                :  7,                                0x19,             AVS_FDRH, ECC;
+   Temp_FDRV_Stat                :  7,                                0x19,             AVS_FDRV, ECC;
+   Temp_FPLH_Stat                :  7,                                0x19,             AVS_FPLH, ECC;
+   Temp_FPLV_Stat                :  7,                                0x19,             AVS_FPLV, ECC;
+   Temp_FPRH_Stat                :  7,                                0x19,             AVS_FPRH, ECC;
+   Temp_FPRV_Stat                :  7,                                0x19,             AVS_FPRV, ECC;
+   Temp_RLH_Stat                 :  7,                                0x19,              AVS_RLH, ECC;
+   Temp_RLV_Stat                 :  7,                                0x19,              AVS_RLV, ECC;
+   Temp_RRH_Stat                 :  7,                                0x19,              AVS_RRH, ECC;
+   Temp_RRV_Stat                 :  7,                                0x19,              AVS_RRV, ECC;
+   Fault_Circuit_FDLH_Stat       :  3,                                0x00,             AVS_FDLH, ECC;
+   Fault_Circuit_FDLV_Stat       :  3,                                0x00,             AVS_FDLV, ECC;
+   Fault_Circuit_FDRH_Stat       :  3,                                0x00,             AVS_FDRH, ECC;
+   Fault_Circuit_FDRV_Stat       :  3,                                0x00,             AVS_FDRV, ECC;
+   Fault_Circuit_FPLH_Stat       :  3,                                0x00,             AVS_FPLH, ECC;
+   Fault_Circuit_FPLV_Stat       :  3,                                0x00,             AVS_FPLV, ECC;
+   Fault_Circuit_FPRH_Stat       :  3,                                0x00,             AVS_FPRH, ECC;
+   Fault_Circuit_FPRV_Stat       :  3,                                0x00,             AVS_FPRV, ECC;
+   Fault_Circuit_RLH_Stat        :  3,                                0x00,              AVS_RLH, ECC;
+   Fault_Circuit_RLV_Stat        :  3,                                0x00,              AVS_RLV, ECC;
+   Fault_Circuit_RRH_Stat        :  3,                                0x00,              AVS_RRH, ECC;
+   Fault_Circuit_RRV_Stat        :  3,                                0x00,              AVS_RRV, ECC;
+   RsErr_FDLH                    :  1,                                0x00,             AVS_FDLH, ECC;
+   RsErr_FDLV                    :  1,                                0x00,             AVS_FDLV, ECC;
+   RsErr_FDRH                    :  1,                                0x00,             AVS_FDRH, ECC;
+   RsErr_FDRV                    :  1,                                0x00,             AVS_FDRV, ECC;
+   RsErr_FPLH                    :  1,                                0x00,             AVS_FPLH, ECC;
+   RsErr_FPLV                    :  1,                                0x00,             AVS_FPLV, ECC;
+   RsErr_FPRH                    :  1,                                0x00,             AVS_FPRH, ECC;
+   RsErr_FPRV                    :  1,                                0x00,             AVS_FPRV, ECC;
+   RsErr_RLH                     :  1,                                0x00,              AVS_RLH, ECC;
+   RsErr_RLV                     :  1,                                0x00,              AVS_RLV, ECC;
+   RsErr_RRH                     :  1,                                0x00,              AVS_RRH, ECC;
+   RsErr_RRV                     :  1,                                0x00,              AVS_RRV, ECC;
+   WIND_MODE_FDRH                :  1,                                0x00,                  ECC, AVS_FDRH;
+   WIND_MODE_FDRH_Stat           :  1,                                0x00,             AVS_FDRH, ECC;
+   WIND_MODE_FDLH                :  1,                                0x00,                  ECC, AVS_FDLH;
+   WIND_MODE_FDLV                :  1,                                0x00,                  ECC, AVS_FDLV;
+   WIND_MODE_FDRV                :  1,                                0x00,                  ECC, AVS_FDRV;
+   WIND_MODE_FPLH                :  1,                                0x00,                  ECC, AVS_FPLH;
+   WIND_MODE_FPLV                :  1,                                0x00,                  ECC, AVS_FPLV;
+   WIND_MODE_FPRH                :  1,                                0x00,                  ECC, AVS_FPRH;
+   WIND_MODE_FPRV                :  1,                                0x00,                  ECC, AVS_FPRV;
+   WIND_MODE_RLH                 :  1,                                0x00,                  ECC, AVS_RLH;
+   WIND_MODE_RLV                 :  1,                                0x00,                  ECC, AVS_RLV;
+   WIND_MODE_RRH                 :  1,                                0x00,                  ECC, AVS_RRH;
+   WIND_MODE_RRV                 :  1,                                0x00,                  ECC, AVS_RRV;
+   WIND_MODE_FDLH_Stat           :  1,                                0x00,             AVS_FDLH, ECC;
+   WIND_MODE_FDLV_Stat           :  1,                                0x00,             AVS_FDLV, ECC;
+   WIND_MODE_FDRV_Stat           :  1,                                0x00,             AVS_FDRV, ECC;
+   WIND_MODE_FPLH_Stat           :  1,                                0x00,             AVS_FPLH, ECC;
+   WIND_MODE_FPLV_Stat           :  1,                                0x00,             AVS_FPLV, ECC;
+   WIND_MODE_FPRH_Stat           :  1,                                0x00,             AVS_FPRH, ECC;
+   WIND_MODE_FPRV_Stat           :  1,                                0x00,             AVS_FPRV, ECC;
+   WIND_MODE_RLH_Stat            :  1,                                0x00,              AVS_RLH, ECC;
+   WIND_MODE_RLV_Stat            :  1,                                0x00,              AVS_RLV, ECC;
+   WIND_MODE_RRH_Stat            :  1,                                0x00,              AVS_RRH, ECC;
+   WIND_MODE_RRV_Stat            :  1,                                0x00,              AVS_RRV, ECC;
+}
+/* ----------DIAGNOSTIC SIGNAL DEFINITIONS---------- */
+Diagnostic_signals {
+   /* MasterReq Reserved Signals */
+   MasterReqB0         :    8,   0;
+   MasterReqB1         :    8,   0;
+   MasterReqB2         :    8,   0;
+   MasterReqB3         :    8,   0;
+   MasterReqB4         :    8,   0;
+   MasterReqB5         :    8,   0;
+   MasterReqB6         :    8,   0;
+   MasterReqB7         :    8,   0;
+   /* SlaveResp Reserved Signals */
+   SlaveRespB0         :    8,   0;
+   SlaveRespB1         :    8,   0;
+   SlaveRespB2         :    8,   0;
+   SlaveRespB3         :    8,   0;
+   SlaveRespB4         :    8,   0;
+   SlaveRespB5         :    8,   0;
+   SlaveRespB6         :    8,   0;
+   SlaveRespB7         :    8,   0;
+}
+/* ----------UNCONDITIONAL FRAME DEFINITIONS---------- */
+Frames {
+   ECC_FDRH_CNTL       : 0x18, ECC                 ,    4 {
+      CmdIgnSts_FDRH      , 0;
+      BLDC_RPM_FDRH       , 3;
+      WIND_MODE_FDRH      , 15;
+      V_ANGLE_FDRH        , 16;
+      H_ANGLE_FDRH        , 24;
+   }
+   FDRH_STAS_1         : 0x19, AVS_FDRH            ,    4 {
+      CmdIgnSts_FDRH_Stat , 0;
+      BLDC_RPM_FDRH_Stat  , 3;
+      WIND_MODE_FDRH_Stat , 15;
+      V_ANGLE_FDRH_Stat   , 16;
+      H_ANGLE_FDRH_Stat   , 24;
+   }
+   FDRH_STAS_2         : 0x1A, AVS_FDRH            ,    4 {
+      Vent_Present_FDRH_Stat, 0;
+      Fault_BLDC_FDRH_Stat, 2;
+      Current_FDRH_Stat   , 5;
+      Voltage_FDRH_Stat   , 13;
+      RsErr_FDRH          , 21;
+      Temp_FDRH_Stat      , 22;
+      Fault_Circuit_FDRH_Stat, 29;
+   }
+   ECC_FDLV_CNTL       : 0x1B, ECC                 ,    4 {
+      CmdIgnSts_FDLV      , 0;
+      BLDC_RPM_FDLV       , 3;
+      WIND_MODE_FDLV      , 15;
+      V_ANGLE_FDLV        , 16;
+      H_ANGLE_FDLV        , 24;
+   }
+   FDLV_STAS_1         : 0x1C, AVS_FDLV            ,    4 {
+      CmdIgnSts_FDLV_Stat , 0;
+      BLDC_RPM_FDLV_Stat  , 3;
+      WIND_MODE_FDLV_Stat , 15;
+      V_ANGLE_FDLV_Stat   , 16;
+      H_ANGLE_FDLV_Stat   , 24;
+   }
+   FDLV_STAS_2         : 0x1D, AVS_FDLV            ,    4 {
+      Vent_Present_FDLV_Stat, 0;
+      Fault_BLDC_FDLV_Stat, 2;
+      Current_FDLV_Stat   , 5;
+      Voltage_FDLV_Stat   , 13;
+      RsErr_FDLV          , 21;
+      Temp_FDLV_Stat      , 22;
+      Fault_Circuit_FDLV_Stat, 29;
+   }
+   ECC_FDLH_CNTL       : 0x1E, ECC                 ,    4 {
+      CmdIgnSts_FDLH      , 0;
+      BLDC_RPM_FDLH       , 3;
+      WIND_MODE_FDLH      , 15;
+      V_ANGLE_FDLH        , 16;
+      H_ANGLE_FDLH        , 24;
+   }
+   FDLH_STAS_1         : 0x1F, AVS_FDLH            ,    4 {
+      CmdIgnSts_FDLH_Stat , 0;
+      BLDC_RPM_FDLH_Stat  , 3;
+      WIND_MODE_FDLH_Stat , 15;
+      V_ANGLE_FDLH_Stat   , 16;
+      H_ANGLE_FDLH_Stat   , 24;
+   }
+   FDLH_STAS_2         : 0x20, AVS_FDLH            ,    4 {
+      Vent_Present_FDLH_Stat, 0;
+      Fault_BLDC_FDLH_Stat, 2;
+      Current_FDLH_Stat   , 5;
+      Voltage_FDLH_Stat   , 13;
+      RsErr_FDLH          , 21;
+      Temp_FDLH_Stat      , 22;
+      Fault_Circuit_FDLH_Stat, 29;
+   }
+   ECC_FDRV_CNTL       : 0x21, ECC                 ,    4 {
+      CmdIgnSts_FDRV      , 0;
+      BLDC_RPM_FDRV       , 3;
+      WIND_MODE_FDRV      , 15;
+      V_ANGLE_FDRV        , 16;
+      H_ANGLE_FDRV        , 24;
+   }
+   FDRV_STAS_1         : 0x22, AVS_FDRV            ,    4 {
+      CmdIgnSts_FDRV_Stat , 0;
+      BLDC_RPM_FDRV_Stat  , 3;
+      WIND_MODE_FDRV_Stat , 15;
+      V_ANGLE_FDRV_Stat   , 16;
+      H_ANGLE_FDRV_Stat   , 24;
+   }
+   FDRV_STAS_2         : 0x23, AVS_FDRV            ,    4 {
+      Vent_Present_FDRV_Stat, 0;
+      Fault_BLDC_FDRV_Stat, 2;
+      Current_FDRV_Stat   , 5;
+      Voltage_FDRV_Stat   , 13;
+      RsErr_FDRV          , 21;
+      Temp_FDRV_Stat      , 22;
+      Fault_Circuit_FDRV_Stat, 29;
+   }
+   ECC_FPLH_CNTL       : 0x24, ECC                 ,    4 {
+      CmdIgnSts_FPLH      , 0;
+      BLDC_RPM_FPLH       , 3;
+      WIND_MODE_FPLH      , 15;
+      V_ANGLE_FPLH        , 16;
+      H_ANGLE_FPLH        , 24;
+   }
+   FPLH_STAS_1         : 0x25, AVS_FPLH            ,    4 {
+      CmdIgnSts_FPLH_Stat , 0;
+      BLDC_RPM_FPLH_Stat  , 3;
+      WIND_MODE_FPLH_Stat , 15;
+      V_ANGLE_FPLH_Stat   , 16;
+      H_ANGLE_FPLH_Stat   , 24;
+   }
+   FPLH_STAS_2         : 0x26, AVS_FPLH            ,    4 {
+      Vent_Present_FPLH_Stat, 0;
+      Fault_BLDC_FPLH_Stat, 2;
+      Current_FPLH_Stat   , 5;
+      Voltage_FPLH_Stat   , 13;
+      RsErr_FPLH          , 21;
+      Temp_FPLH_Stat      , 22;
+      Fault_Circuit_FPLH_Stat, 29;
+   }
+   ECC_FPLV_CNTL       : 0x27, ECC                 ,    4 {
+      CmdIgnSts_FPLV      , 0;
+      BLDC_RPM_FPLV       , 3;
+      WIND_MODE_FPLV      , 15;
+      V_ANGLE_FPLV        , 16;
+      H_ANGLE_FPLV        , 24;
+   }
+   FPLV_STAS_1         : 0x28, AVS_FPLV            ,    4 {
+      CmdIgnSts_FPLV_Stat , 0;
+      BLDC_RPM_FPLV_Stat  , 3;
+      WIND_MODE_FPLV_Stat , 15;
+      V_ANGLE_FPLV_Stat   , 16;
+      H_ANGLE_FPLV_Stat   , 24;
+   }
+   FPLV_STAS_2         : 0x29, AVS_FPLV            ,    4 {
+      Vent_Present_FPLV_Stat, 0;
+      Fault_BLDC_FPLV_Stat, 2;
+      Current_FPLV_Stat   , 5;
+      Voltage_FPLV_Stat   , 13;
+      RsErr_FPLV          , 21;
+      Temp_FPLV_Stat      , 22;
+      Fault_Circuit_FPLV_Stat, 29;
+   }
+   ECC_FPRH_CNTL       : 0x2A, ECC                 ,    4 {
+      CmdIgnSts_FPRH      , 0;
+      BLDC_RPM_FPRH       , 3;
+      WIND_MODE_FPRH      , 15;
+      V_ANGLE_FPRH        , 16;
+      H_ANGLE_FPRH        , 24;
+   }
+   FPRH_STAS_1         : 0x2B, AVS_FPRH            ,    4 {
+      CmdIgnSts_FPRH_Stat , 0;
+      BLDC_RPM_FPRH_Stat  , 3;
+      WIND_MODE_FPRH_Stat , 15;
+      V_ANGLE_FPRH_Stat   , 16;
+      H_ANGLE_FPRH_Stat   , 24;
+   }
+   FPRH_STAS_2         : 0x2C, AVS_FPRH            ,    4 {
+      Vent_Present_FPRH_Stat, 0;
+      Fault_BLDC_FPRH_Stat, 2;
+      Current_FPRH_Stat   , 5;
+      Voltage_FPRH_Stat   , 13;
+      RsErr_FPRH          , 21;
+      Temp_FPRH_Stat      , 22;
+      Fault_Circuit_FPRH_Stat, 29;
+   }
+   ECC_FPRV_CNTL       : 0x2D, ECC                 ,    4 {
+      CmdIgnSts_FPRV      , 0;
+      BLDC_RPM_FPRV       , 3;
+      WIND_MODE_FPRV      , 15;
+      V_ANGLE_FPRV        , 16;
+      H_ANGLE_FPRV        , 24;
+   }
+   FPRV_STAS_1         : 0x2E, AVS_FPRV            ,    4 {
+      CmdIgnSts_FPRV_Stat , 0;
+      BLDC_RPM_FPRV_Stat  , 3;
+      WIND_MODE_FPRV_Stat , 15;
+      V_ANGLE_FPRV_Stat   , 16;
+      H_ANGLE_FPRV_Stat   , 24;
+   }
+   FPRV_STAS_2         : 0x2F, AVS_FPRV            ,    4 {
+      Vent_Present_FPRV_Stat, 0;
+      Fault_BLDC_FPRV_Stat, 2;
+      Current_FPRV_Stat   , 5;
+      Voltage_FPRV_Stat   , 13;
+      RsErr_FPRV          , 21;
+      Temp_FPRV_Stat      , 22;
+      Fault_Circuit_FPRV_Stat, 29;
+   }
+   ECC_RLH_CNTL        : 0x30, ECC                 ,    4 {
+      CmdIgnSts_RLH       , 0;
+      BLDC_RPM_RLH        , 3;
+      WIND_MODE_RLH       , 15;
+      V_ANGLE_RLH         , 16;
+      H_ANGLE_RLH         , 24;
+   }
+   RLH_STAS_1          : 0x31, AVS_RLH             ,    4 {
+      CmdIgnSts_RLH_Stat  , 0;
+      BLDC_RPM_RLH_Stat   , 3;
+      WIND_MODE_RLH_Stat  , 15;
+      V_ANGLE_RLH_Stat    , 16;
+      H_ANGLE_RLH_Stat    , 24;
+   }
+   RLH_STAS_2          : 0x32, AVS_RLH             ,    4 {
+      Vent_Present_RLH_Stat, 0;
+      Fault_BLDC_RLH_Stat , 2;
+      Current_RLH_Stat    , 5;
+      Voltage_RLH_Stat    , 13;
+      RsErr_RLH           , 21;
+      Temp_RLH_Stat       , 22;
+      Fault_Circuit_RLH_Stat, 29;
+   }
+   ECC_RLV_CNTL        : 0x33, ECC                 ,    4 {
+      CmdIgnSts_RLV       , 0;
+      BLDC_RPM_RLV        , 3;
+      WIND_MODE_RLV       , 15;
+      V_ANGLE_RLV         , 16;
+      H_ANGLE_RLV         , 24;
+   }
+   RLV_STAS_1          : 0x34, AVS_RLV             ,    4 {
+      CmdIgnSts_RLV_Stat  , 0;
+      BLDC_RPM_RLV_Stat   , 3;
+      WIND_MODE_RLV_Stat  , 15;
+      V_ANGLE_RLV_Stat    , 16;
+      H_ANGLE_RLV_Stat    , 24;
+   }
+   RLV_STAS_2          : 0x35, AVS_RLV             ,    4 {
+      Vent_Present_RLV_Stat, 0;
+      Fault_BLDC_RLV_Stat , 2;
+      Current_RLV_Stat    , 5;
+      Voltage_RLV_Stat    , 13;
+      RsErr_RLV           , 21;
+      Temp_RLV_Stat       , 22;
+      Fault_Circuit_RLV_Stat, 29;
+   }
+   ECC_RRH_CNTL        : 0x36, ECC                 ,    4 {
+      CmdIgnSts_RRH       , 0;
+      BLDC_RPM_RRH        , 3;
+      WIND_MODE_RRH       , 15;
+      V_ANGLE_RRH         , 16;
+      H_ANGLE_RRH         , 24;
+   }
+   RRH_STAS_1          : 0x37, AVS_RRH             ,    4 {
+      CmdIgnSts_RRH_Stat  , 0;
+      BLDC_RPM_RRH_Stat   , 3;
+      WIND_MODE_RRH_Stat  , 15;
+      V_ANGLE_RRH_Stat    , 16;
+      H_ANGLE_RRH_Stat    , 24;
+   }
+   RRH_STAS_2          : 0x38, AVS_RRH             ,    4 {
+      Vent_Present_RRH_Stat, 0;
+      Fault_BLDC_RRH_Stat , 2;
+      Current_RRH_Stat    , 5;
+      Voltage_RRH_Stat    , 13;
+      RsErr_RRH           , 21;
+      Temp_RRH_Stat       , 22;
+      Fault_Circuit_RRH_Stat, 29;
+   }
+   ECC_RRV_CNTL        : 0x39, ECC                 ,    4 {
+      CmdIgnSts_RRV       , 0;
+      BLDC_RPM_RRV        , 3;
+      WIND_MODE_RRV       , 15;
+      V_ANGLE_RRV         , 16;
+      H_ANGLE_RRV         , 24;
+   }
+   RRV_STAS_1          : 0x3A, AVS_RRV             ,    4 {
+      CmdIgnSts_RRV_Stat  , 0;
+      BLDC_RPM_RRV_Stat   , 3;
+      WIND_MODE_RRV_Stat  , 15;
+      V_ANGLE_RRV_Stat    , 16;
+      H_ANGLE_RRV_Stat    , 24;
+   }
+   RRV_STAS_2          : 0x3B, AVS_RRV             ,    4 {
+      Vent_Present_RRV_Stat, 0;
+      Fault_BLDC_RRV_Stat , 2;
+      Current_RRV_Stat    , 5;
+      Voltage_RRV_Stat    , 13;
+      RsErr_RRV           , 21;
+      Temp_RRV_Stat       , 22;
+      Fault_Circuit_RRV_Stat, 29;
+   }
+}
+/* ----------DIAGNOSTIC FRAME DEFINITIONS---------- */
+Diagnostic_frames {
+   MasterReq           : 0x3C {
+      MasterReqB0         , 0;
+      MasterReqB1         , 8;
+      MasterReqB2         , 16;
+      MasterReqB3         , 24;
+      MasterReqB4         , 32;
+      MasterReqB5         , 40;
+      MasterReqB6         , 48;
+      MasterReqB7         , 56;
+   }
+   SlaveResp           : 0x3D {
+      SlaveRespB0         , 0;
+      SlaveRespB1         , 8;
+      SlaveRespB2         , 16;
+      SlaveRespB3         , 24;
+      SlaveRespB4         , 32;
+      SlaveRespB5         , 40;
+      SlaveRespB6         , 48;
+      SlaveRespB7         , 56;
+   }
+}
+/* ----------NODE ATTRIBUTE DEFINITIONS---------- */
+Node_attributes {
+   AVS_FDLH {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x43;                     /* configured NAD of node */
+      initial_NAD                = 0x43;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_FDLH;               /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_FDLH_CNTL;
+         FDLH_STAS_1;
+         FDLH_STAS_2;
+      }
+   }
+   AVS_FDLV {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x44;                     /* configured NAD of node */
+      initial_NAD                = 0x44;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_FDLV;               /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_FDLV_CNTL;
+         FDLV_STAS_1;
+         FDLV_STAS_2;
+      }
+   }
+   AVS_FDRH {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x45;                     /* configured NAD of node */
+      initial_NAD                = 0x45;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_FDRH;               /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_FDRH_CNTL;
+         FDRH_STAS_1;
+         FDRH_STAS_2;
+      }
+   }
+   AVS_FDRV {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x46;                     /* configured NAD of node */
+      initial_NAD                = 0x46;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_FDRV;               /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_FDRV_CNTL;
+         FDRV_STAS_1;
+         FDRV_STAS_2;
+      }
+   }
+   AVS_FPLH {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x47;                     /* configured NAD of node */
+      initial_NAD                = 0x47;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_FPLH;               /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_FPLH_CNTL;
+         FPLH_STAS_1;
+         FPLH_STAS_2;
+      }
+   }
+   AVS_FPLV {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x48;                     /* configured NAD of node */
+      initial_NAD                = 0x48;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_FPLV;               /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_FPLV_CNTL;
+         FPLV_STAS_1;
+         FPLV_STAS_2;
+      }
+   }
+   AVS_FPRH {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x49;                     /* configured NAD of node */
+      initial_NAD                = 0x49;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_FPRH;               /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_FPRH_CNTL;
+         FPRH_STAS_1;
+         FPRH_STAS_2;
+      }
+   }
+   AVS_FPRV {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x4A;                     /* configured NAD of node */
+      initial_NAD                = 0x4A;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_FPRV;               /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_FPRV_CNTL;
+         FPRV_STAS_1;
+         FPRV_STAS_2;
+      }
+   }
+   AVS_RLH {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x4B;                     /* configured NAD of node */
+      initial_NAD                = 0x4B;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_RLH;                /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_RLH_CNTL;
+         RLH_STAS_1;
+         RLH_STAS_2;
+      }
+   }
+   AVS_RLV {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x4C;                     /* configured NAD of node */
+      initial_NAD                = 0x4C;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_RLV;                /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_RLV_CNTL;
+         RLV_STAS_1;
+         RLV_STAS_2;
+      }
+   }
+   AVS_RRH {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x4D;                     /* configured NAD of node */
+      initial_NAD                = 0x4D;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_RRH;                /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_RRH_CNTL;
+         RRH_STAS_1;
+         RRH_STAS_2;
+      }
+   }
+   AVS_RRV {
+      LIN_protocol               = "2.1";                    /* Node protocol version */
+      configured_NAD             = 0x4E;                     /* configured NAD of node */
+      initial_NAD                = 0x4E;                     /* initial NAD of node */
+      product_id                 = 0x37, 0xFFFE, 0x00;       /* Product id */
+      response_error             = RsErr_RRV;                /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 10 ms;                    /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         ECC_RRV_CNTL;
+         RRV_STAS_1;
+         RRV_STAS_2;
+      }
+   }
+}
+/* ----------SCHEDULE TABLE DEFINITIONS---------- */
+Schedule_tables {
+   Normal {
+      ECC_FDRH_CNTL                                      delay 20 ms;
+      FDRH_STAS_1                                        delay 20 ms;
+      FDRH_STAS_2                                        delay 20 ms;
+      ECC_FDRV_CNTL                                      delay 20 ms;
+      FDRV_STAS_1                                        delay 20 ms;
+      FDRV_STAS_2                                        delay 20 ms;
+      ECC_FPLH_CNTL                                      delay 20 ms;
+      FPLH_STAS_1                                        delay 20 ms;
+      FPLH_STAS_2                                        delay 20 ms;
+      ECC_FPLV_CNTL                                      delay 20 ms;
+      FPLV_STAS_1                                        delay 20 ms;
+      FPLV_STAS_2                                        delay 20 ms;
+   }
+}
+/* ----------SIGNAL ENCODDING DEFINITIONS---------- */
+Signal_encoding_types {
+   Current_10mA {
+      physical_value,0,80,1.0,0.0,"10mAmp";
+      logical_value,80,"10 mili ampere";
+   }
+   BLDC_Faults {
+      logical_value,0,"No_Faults";
+      logical_value,1,"BLDC_Line_Short_to_ground";
+      logical_value,2,"BLDC_Line_Short_to_battery";
+      logical_value,3,"BLDC_Line_Circiut_open";
+      logical_value,4,"BLDC_Overcurrent";
+      logical_value,5,"BLDC_Overvoltage";
+      logical_value,6,"BLDC_Overtemperature";
+      logical_value,7,"BLDC_Error_RPM";
+   }
+   Faults_Circuit {
+      logical_value,0,"No_Faults";
+      logical_value,1,"PCB_Or_ECU_Overtemperature";
+      logical_value,2,"PCB_Or_ECU_Internal_Performance";
+      logical_value,3,"Circit_Battery_Voltage _Below_Threshhold";
+      logical_value,4,"Circit_Battery_Voltage _Above_Threshhold";
+      logical_value,5,"LIN BUS Error";
+      logical_value,6,"NAD is NOT configured";
+      logical_value,7,"LIN BUS Off";
+   }
+   CMD_BLDC_RPM {
+      physical_value,0,8191,1.0,0.0,"RPM";
+      logical_value,8191,"SNA";
+   }
+   Temp_degrees_C {
+      physical_value,0,126,1.0,-40.0,"C";
+      logical_value,255,"SNA";
+   }
+   Voltage {
+      physical_value,0,25,0.1,0.0,"V";
+      logical_value,255,"Voltage";
+   }
+   HORIZON_ANGLE {
+      physical_value,0,70,1.0,0.0,"degree";
+      logical_value,70,"Horizontal angle";
+   }
+   VERTICAL_ANGLE {
+      physical_value,0,130,1.0,0.0,"degree";
+      logical_value,130,"Vertical Angle";
+   }
+   CMD_IGN_STAT {
+      logical_value,0,"Initialization";
+      logical_value,1,"IGN_LK";
+      logical_value,3,"IGN_ACC";
+      logical_value,4,"IGN_RUN";
+      logical_value,5,"IGN_START";
+      logical_value,7,"SNA";
+   }
+   Vent_Present {
+      logical_value,0,"Absent";
+      logical_value,1,"Used";
+      logical_value,2,"Not Used";
+   }
+   Fault_Flag {
+      logical_value,0,"No_Error";
+      logical_value,1,"Error";
+   }
+   CMD_Wind_Mode {
+      logical_value,0,"Manual";
+      logical_value,1,"Auto";
+   }
+}
+/* ----------SIGNAL REPRESENTATION DEFINITIONS---------- */
+Signal_representation {
+   Current_10mA:Current_FDLH_Stat,Current_FDLV_Stat,Current_FDRH_Stat,Current_FDRV_Stat,Current_FPLH_Stat,Current_FPLV_Stat,Current_FPRH_Stat,Current_FPRV_Stat,Current_RLH_Stat,Current_RLV_Stat,Current_RRH_Stat,Current_RRV_Stat;
+   BLDC_Faults:Fault_BLDC_FDLH_Stat,Fault_BLDC_FDLV_Stat,Fault_BLDC_FDRH_Stat,Fault_BLDC_FDRV_Stat,Fault_BLDC_FPLH_Stat,Fault_BLDC_FPLV_Stat,Fault_BLDC_FPRH_Stat,Fault_BLDC_FPRV_Stat,Fault_BLDC_RLH_Stat,Fault_BLDC_RLV_Stat,Fault_BLDC_RRH_Stat,Fault_BLDC_RRV_Stat;
+   Faults_Circuit:Fault_Circuit_FDLH_Stat,Fault_Circuit_FDLV_Stat,Fault_Circuit_FDRH_Stat,Fault_Circuit_FDRV_Stat,Fault_Circuit_FPLH_Stat,Fault_Circuit_FPLV_Stat,Fault_Circuit_FPRH_Stat,Fault_Circuit_FPRV_Stat,Fault_Circuit_RLH_Stat,Fault_Circuit_RLV_Stat,Fault_Circuit_RRH_Stat,Fault_Circuit_RRV_Stat;
+   CMD_BLDC_RPM:BLDC_RPM_FDLH,BLDC_RPM_FDLV,BLDC_RPM_FDRH,BLDC_RPM_FDRV,BLDC_RPM_FPLH,BLDC_RPM_FPLV,BLDC_RPM_FPRH,BLDC_RPM_FPRV,BLDC_RPM_RLH,BLDC_RPM_RRH,BLDC_RPM_RRV,BLDC_RPM_RLV,BLDC_RPM_FDLH_Stat,BLDC_RPM_FDLV_Stat,BLDC_RPM_FDRH_Stat,BLDC_RPM_FDRV_Stat,BLDC_RPM_FPLH_Stat,BLDC_RPM_FPLV_Stat,BLDC_RPM_FPRH_Stat,BLDC_RPM_FPRV_Stat,BLDC_RPM_RLH_Stat,BLDC_RPM_RRH_Stat,BLDC_RPM_RRV_Stat,BLDC_RPM_RLV_Stat;
+   Temp_degrees_C:Temp_FDLH_Stat,Temp_FDLV_Stat,Temp_FDRH_Stat,Temp_FDRV_Stat,Temp_FPLH_Stat,Temp_FPLV_Stat,Temp_FPRH_Stat,Temp_FPRV_Stat,Temp_RLH_Stat,Temp_RLV_Stat,Temp_RRH_Stat,Temp_RRV_Stat;
+   Voltage:Voltage_FDLH_Stat,Voltage_FDLV_Stat,Voltage_FDRH_Stat,Voltage_FDRV_Stat,Voltage_FPLH_Stat,Voltage_FPLV_Stat,Voltage_FPRH_Stat,Voltage_FPRV_Stat,Voltage_RLH_Stat,Voltage_RLV_Stat,Voltage_RRH_Stat,Voltage_RRV_Stat;
+   HORIZON_ANGLE:H_ANGLE_FDLH,H_ANGLE_FDLV,H_ANGLE_FDRH,H_ANGLE_FDRV,H_ANGLE_FPLH,H_ANGLE_FPLV,H_ANGLE_FPRH,H_ANGLE_FPRV,H_ANGLE_RLH,H_ANGLE_RLV,H_ANGLE_RRH,H_ANGLE_RRV,H_ANGLE_FDLH_Stat,H_ANGLE_FDLV_Stat,H_ANGLE_FDRH_Stat,H_ANGLE_FDRV_Stat,H_ANGLE_FPLH_Stat,H_ANGLE_FPLV_Stat,H_ANGLE_FPRH_Stat,H_ANGLE_FPRV_Stat,H_ANGLE_RLH_Stat,H_ANGLE_RLV_Stat,H_ANGLE_RRH_Stat,H_ANGLE_RRV_Stat;
+   VERTICAL_ANGLE:V_ANGLE_FDLH,V_ANGLE_FDLV,V_ANGLE_FDRH,V_ANGLE_FDRV,V_ANGLE_FPLH,V_ANGLE_FPLV,V_ANGLE_FPRH,V_ANGLE_FPRV,V_ANGLE_RLH,V_ANGLE_RLV,V_ANGLE_RRH,V_ANGLE_RRV,V_ANGLE_FDLH_Stat,V_ANGLE_FDLV_Stat,V_ANGLE_FDRH_Stat,V_ANGLE_FDRV_Stat,V_ANGLE_FPLH_Stat,V_ANGLE_FPLV_Stat,V_ANGLE_FPRH_Stat,V_ANGLE_FPRV_Stat,V_ANGLE_RLH_Stat,V_ANGLE_RLV_Stat,V_ANGLE_RRH_Stat,V_ANGLE_RRV_Stat;
+   CMD_IGN_STAT:CmdIgnSts_FDLH,CmdIgnSts_FDLV,CmdIgnSts_FDRH,CmdIgnSts_FDRV,CmdIgnSts_FPLH,CmdIgnSts_FPLV,CmdIgnSts_FPRH,CmdIgnSts_FPRV,CmdIgnSts_RLH,CmdIgnSts_RLV,CmdIgnSts_RRH,CmdIgnSts_RRV,CmdIgnSts_FDLH_Stat,CmdIgnSts_FDLV_Stat,CmdIgnSts_FDRH_Stat,CmdIgnSts_FDRV_Stat,CmdIgnSts_FPLH_Stat,CmdIgnSts_FPLV_Stat,CmdIgnSts_FPRH_Stat,CmdIgnSts_FPRV_Stat,CmdIgnSts_RLH_Stat,CmdIgnSts_RLV_Stat,CmdIgnSts_RRH_Stat,CmdIgnSts_RRV_Stat;
+   Vent_Present:Vent_Present_FDLH_Stat,Vent_Present_FDLV_Stat,Vent_Present_FDRH_Stat,Vent_Present_FDRV_Stat,Vent_Present_FPLH_Stat,Vent_Present_FPLV_Stat,Vent_Present_FPRH_Stat,Vent_Present_FPRV_Stat,Vent_Present_RLH_Stat,Vent_Present_RLV_Stat,Vent_Present_RRH_Stat,Vent_Present_RRV_Stat;
+   Fault_Flag:RsErr_FDLH,RsErr_FDLV,RsErr_FDRH,RsErr_FDRV,RsErr_FPLH,RsErr_FPLV,RsErr_FPRH,RsErr_FPRV,RsErr_RLH,RsErr_RLV,RsErr_RRH,RsErr_RRV;
+   CMD_Wind_Mode:WIND_MODE_FDRH,WIND_MODE_FDRH_Stat,WIND_MODE_FDLH,WIND_MODE_FDLV,WIND_MODE_FDRV,WIND_MODE_FPLH,WIND_MODE_FPLV,WIND_MODE_FPRH,WIND_MODE_FPRV,WIND_MODE_RLH,WIND_MODE_RLV,WIND_MODE_RRH,WIND_MODE_RRV,WIND_MODE_FDLH_Stat,WIND_MODE_FDLV_Stat,WIND_MODE_FDRV_Stat,WIND_MODE_FPLH_Stat,WIND_MODE_FPLV_Stat,WIND_MODE_FPRH_Stat,WIND_MODE_FPRV_Stat,WIND_MODE_RLH_Stat,WIND_MODE_RLV_Stat,WIND_MODE_RRH_Stat,WIND_MODE_RRV_Stat;
+}
+

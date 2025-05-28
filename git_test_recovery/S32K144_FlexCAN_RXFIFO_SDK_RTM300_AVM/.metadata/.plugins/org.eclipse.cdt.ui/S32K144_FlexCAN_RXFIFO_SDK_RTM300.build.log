@@ -1,0 +1,11 @@
+14:54:46 **** Incremental Build of configuration Debug for project S32K144_FlexCAN_RXFIFO_SDK_RTM300 ****
+make -j12 all 
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley S32K144_FlexCAN_RXFIFO_SDK_RTM300.elf
+   text	   data	    bss	    dec	    hex	filename
+  30108	    636	   3816	  34560	   8700	S32K144_FlexCAN_RXFIFO_SDK_RTM300.elf
+Finished building: S32K144_FlexCAN_RXFIFO_SDK_RTM300.siz
+ 
+
+14:54:47 Build Finished (took 562ms)
+

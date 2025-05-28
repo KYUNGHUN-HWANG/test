@@ -1,0 +1,465 @@
+/*---------GLOBAL DEFINITIONS-----------*/
+LIN_description_file;
+LIN_protocol_version             = "2.2";
+LIN_language_version             = "2.2";
+LIN_speed                        = 19.2 kbps;
+/* ----------NODE DEFINITIONS---------- */
+Nodes {
+   Master:
+      EVNT,                                                  /* Master node name */
+      5 ms,                                                  /* Time base */
+      0.1 ms;                                                /* Jitter */
+   Slaves:
+      RR_CLLR,
+      RR_CLUD,
+      RR_CRLR,
+      RR_CRUD;
+}
+/* ----------SIGNAL DEFINITIONS---------- */
+Signals {
+   /* Signal_name                : Size,                              Init,            Publisher, Subscriber(s) */
+   EVNT_ADDr                     :  7,                                0x1F,                 EVNT, RR_CLLR,RR_CLUD,RR_CRLR,RR_CRUD;
+   EVNT_Broad                    :  1,                                0x00,                 EVNT, RR_CLLR,RR_CLUD,RR_CRLR,RR_CRUD;
+   EVNT_REAR_LH_SPEED            :  4,                                0x00,                 EVNT, RR_CLLR,RR_CLUD;
+   EVNT_REAR_RH_SPEED            :  4,                                0x00,                 EVNT, RR_CRLR,RR_CRUD;
+   EVNT_CMD                      :  8,                                0x55,                 EVNT, RR_CLLR,RR_CLUD,RR_CRLR,RR_CRUD;
+   EVNT_Rear_Center_LH_LeftRight_TargetPosition: 11,                                0x00,                 EVNT, RR_CLLR;
+   EVNT_Rear_Center_LH_UpDown_TargetPosition: 11,                                0x00,                 EVNT, RR_CLUD;
+   EVNT_Rear_Center_RH_LeftRight_TargetPosition: 11,                                0x00,                 EVNT, RR_CRLR;
+   EVNT_Rear_Center_RH_UpDown_TargetPosition: 11,                                0x00,                 EVNT, RR_CRUD;
+   RR_CLLR_SPEED                 :  4,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_OpDone                :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_STATE                 :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_ActuatorState         : 11,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_VddReset              :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_Steploss              :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_EIDef                 :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_TSD                   :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_TW                    :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_Tinfo                 :  2,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_Sensor                :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_OV                    :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_UV                    :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_OPEN2                 :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_OPEN1                 :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_OVC2                  :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CLLR_OVC1                  :  1,                                0x00,              RR_CLLR, EVNT;
+   RR_CRLR_SPEED                 :  4,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_OpDone                :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_STATE                 :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_ActuatorState         : 11,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_VddReset              :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_Steploss              :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_EIDef                 :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_TSD                   :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_TW                    :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_Tinfo                 :  2,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_Sensor                :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_OV                    :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_UV                    :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_OPEN2                 :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_OPEN1                 :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_OVC2                  :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CRLR_OVC1                  :  1,                                0x00,              RR_CRLR, EVNT;
+   RR_CLUD_SPEED                 :  4,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_OpDone                :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_STATE                 :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_ActuatorState         : 11,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_VddReset              :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_Steploss              :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_EIDef                 :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_TSD                   :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_TW                    :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_Tinfo                 :  2,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_Sensor                :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_OV                    :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_UV                    :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_OPEN2                 :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_OPEN1                 :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_OVC2                  :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CLUD_OVC1                  :  1,                                0x00,              RR_CLUD, EVNT;
+   RR_CRUD_SPEED                 :  4,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_OpDone                :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_STATE                 :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_ActuatorState         : 11,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_VddReset              :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_Steploss              :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_EIDef                 :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_TSD                   :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_TW                    :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_Tinfo                 :  2,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_Sensor                :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_OV                    :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_UV                    :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_OPEN2                 :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_OPEN1                 :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_OVC2                  :  1,                                0x00,              RR_CRUD, EVNT;
+   RR_CRUD_OVC1                  :  1,                                0x00,              RR_CRUD, EVNT;
+}
+/* ----------DIAGNOSTIC SIGNAL DEFINITIONS---------- */
+Diagnostic_signals {
+   /* MasterReq Reserved Signals */
+   MasterReqB0         :    8,   0;
+   MasterReqB1         :    8,   0;
+   MasterReqB2         :    8,   0;
+   MasterReqB3         :    8,   0;
+   MasterReqB4         :    8,   0;
+   MasterReqB5         :    8,   0;
+   MasterReqB6         :    8,   0;
+   MasterReqB7         :    8,   0;
+   /* SlaveResp Reserved Signals */
+   SlaveRespB0         :    8,   0;
+   SlaveRespB1         :    8,   0;
+   SlaveRespB2         :    8,   0;
+   SlaveRespB3         :    8,   0;
+   SlaveRespB4         :    8,   0;
+   SlaveRespB5         :    8,   0;
+   SlaveRespB6         :    8,   0;
+   SlaveRespB7         :    8,   0;
+}
+/* ----------UNCONDITIONAL FRAME DEFINITIONS---------- */
+Frames {
+   EVNT_MASTER_COMMAND : 0x31, EVNT                ,    8 {
+      EVNT_ADDr           , 0;
+      EVNT_Broad          , 7;
+      EVNT_REAR_RH_SPEED  , 8;
+      EVNT_REAR_LH_SPEED  , 12;
+      EVNT_Rear_Center_LH_LeftRight_TargetPosition, 16;
+      EVNT_Rear_Center_LH_UpDown_TargetPosition, 29;
+      EVNT_Rear_Center_RH_LeftRight_TargetPosition, 40;
+      EVNT_Rear_Center_RH_UpDown_TargetPosition, 53;
+   }
+   RR_CLLR_STATUS      : 0x32, RR_CLLR             ,    4 {
+      RR_CLLR_SPEED       , 0;
+      RR_CLLR_ActuatorState, 5;
+      RR_CLLR_OpDone      , 16;
+      RR_CLLR_VddReset    , 17;
+      RR_CLLR_Steploss    , 18;
+      RR_CLLR_EIDef       , 19;
+      RR_CLLR_TSD         , 20;
+      RR_CLLR_TW          , 21;
+      RR_CLLR_Tinfo       , 22;
+      RR_CLLR_STATE       , 24;
+      RR_CLLR_Sensor      , 25;
+      RR_CLLR_OV          , 26;
+      RR_CLLR_UV          , 27;
+      RR_CLLR_OPEN2       , 28;
+      RR_CLLR_OPEN1       , 29;
+      RR_CLLR_OVC2        , 30;
+      RR_CLLR_OVC1        , 31;
+   }
+   RR_CLUD_STATUS      : 0x33, RR_CLUD             ,    4 {
+      RR_CLUD_SPEED       , 0;
+      RR_CLUD_ActuatorState, 5;
+      RR_CLUD_OpDone      , 16;
+      RR_CLUD_VddReset    , 17;
+      RR_CLUD_Steploss    , 18;
+      RR_CLUD_EIDef       , 19;
+      RR_CLUD_TSD         , 20;
+      RR_CLUD_TW          , 21;
+      RR_CLUD_Tinfo       , 22;
+      RR_CLUD_STATE       , 24;
+      RR_CLUD_Sensor      , 25;
+      RR_CLUD_OV          , 26;
+      RR_CLUD_UV          , 27;
+      RR_CLUD_OPEN2       , 28;
+      RR_CLUD_OPEN1       , 29;
+      RR_CLUD_OVC2        , 30;
+      RR_CLUD_OVC1        , 31;
+   }
+   RR_CRLR_STATUS      : 0x34, RR_CRLR             ,    4 {
+      RR_CRLR_SPEED       , 0;
+      RR_CRLR_ActuatorState, 5;
+      RR_CRLR_OpDone      , 16;
+      RR_CRLR_VddReset    , 17;
+      RR_CRLR_Steploss    , 18;
+      RR_CRLR_EIDef       , 19;
+      RR_CRLR_TSD         , 20;
+      RR_CRLR_TW          , 21;
+      RR_CRLR_Tinfo       , 22;
+      RR_CRLR_STATE       , 24;
+      RR_CRLR_Sensor      , 25;
+      RR_CRLR_OV          , 26;
+      RR_CRLR_UV          , 27;
+      RR_CRLR_OPEN2       , 28;
+      RR_CRLR_OPEN1       , 29;
+      RR_CRLR_OVC2        , 30;
+      RR_CRLR_OVC1        , 31;
+   }
+   RR_CRUD_STATUS      : 0x35, RR_CRUD             ,    4 {
+      RR_CRUD_SPEED       , 0;
+      RR_CRUD_ActuatorState, 5;
+      RR_CRUD_OpDone      , 16;
+      RR_CRUD_VddReset    , 17;
+      RR_CRUD_Steploss    , 18;
+      RR_CRUD_EIDef       , 19;
+      RR_CRUD_TSD         , 20;
+      RR_CRUD_TW          , 21;
+      RR_CRUD_Tinfo       , 22;
+      RR_CRUD_STATE       , 24;
+      RR_CRUD_Sensor      , 25;
+      RR_CRUD_OV          , 26;
+      RR_CRUD_UV          , 27;
+      RR_CRUD_OPEN2       , 28;
+      RR_CRUD_OPEN1       , 29;
+      RR_CRUD_OVC2        , 30;
+      RR_CRUD_OVC1        , 31;
+   }
+   EVNT_SPECIAL_COMMAND: 0x00, EVNT                ,    2 {
+      EVNT_CMD            , 0;
+      EVNT_Broad          , 8;
+      EVNT_ADDr           , 9;
+   }
+}
+/* ----------DIAGNOSTIC FRAME DEFINITIONS---------- */
+Diagnostic_frames {
+   MasterReq           : 0x3C {
+      MasterReqB0         , 0;
+      MasterReqB1         , 8;
+      MasterReqB2         , 16;
+      MasterReqB3         , 24;
+      MasterReqB4         , 32;
+      MasterReqB5         , 40;
+      MasterReqB6         , 48;
+      MasterReqB7         , 56;
+   }
+   SlaveResp           : 0x3D {
+      SlaveRespB0         , 0;
+      SlaveRespB1         , 8;
+      SlaveRespB2         , 16;
+      SlaveRespB3         , 24;
+      SlaveRespB4         , 32;
+      SlaveRespB5         , 40;
+      SlaveRespB6         , 48;
+      SlaveRespB7         , 56;
+   }
+}
+/* ----------NODE ATTRIBUTE DEFINITIONS---------- */
+Node_attributes {
+   RR_CLLR {
+      LIN_protocol               = "2.2";                    /* Node protocol version */
+      configured_NAD             = 0x31;                     /* configured NAD of node */
+      initial_NAD                = 0x31;                     /* initial NAD of node */
+      product_id                 = 0x0115, 0x1100, 0xFF;     /* Product id */
+      response_error             = RR_CLLR_STATE;            /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 0 ms;                     /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         EVNT_MASTER_COMMAND;
+         RR_CLLR_STATUS;
+         EVNT_SPECIAL_COMMAND;
+      }
+   }
+   RR_CLUD {
+      LIN_protocol               = "2.2";                    /* Node protocol version */
+      configured_NAD             = 0x32;                     /* configured NAD of node */
+      initial_NAD                = 0x32;                     /* initial NAD of node */
+      product_id                 = 0x0115, 0x1100, 0xFF;     /* Product id */
+      response_error             = RR_CLUD_STATE;            /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 0 ms;                     /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         EVNT_MASTER_COMMAND;
+         RR_CLUD_STATUS;
+         EVNT_SPECIAL_COMMAND;
+      }
+   }
+   RR_CRLR {
+      LIN_protocol               = "2.2";                    /* Node protocol version */
+      configured_NAD             = 0x33;                     /* configured NAD of node */
+      initial_NAD                = 0x33;                     /* initial NAD of node */
+      product_id                 = 0x0115, 0x1100, 0xFF;     /* Product id */
+      response_error             = RR_CRLR_STATE;            /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 0 ms;                     /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         EVNT_MASTER_COMMAND;
+         RR_CRLR_STATUS;
+         EVNT_SPECIAL_COMMAND;
+      }
+   }
+   RR_CRUD {
+      LIN_protocol               = "2.2";                    /* Node protocol version */
+      configured_NAD             = 0x34;                     /* configured NAD of node */
+      initial_NAD                = 0x34;                     /* initial NAD of node */
+      product_id                 = 0x0115, 0x1100, 0xFF;     /* Product id */
+      response_error             = RR_CRUD_STATE;            /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 0 ms;                     /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         EVNT_MASTER_COMMAND;
+         RR_CRUD_STATUS;
+         EVNT_SPECIAL_COMMAND;
+      }
+   }
+}
+/* ----------SCHEDULE TABLE DEFINITIONS---------- */
+Schedule_tables {
+   SCHEDULER_EVNT_NORMAL_RR_CTR {
+      EVNT_MASTER_COMMAND                                delay 10 ms;
+      RR_CLLR_STATUS                                     delay 10 ms;
+      RR_CLUD_STATUS                                     delay 10 ms;
+      RR_CRLR_STATUS                                     delay 10 ms;
+      RR_CRUD_STATUS                                     delay 10 ms;
+   }
+   SCHEDULER_EVNT_SPECIAL_CMD_RR_CTR {
+      EVNT_SPECIAL_COMMAND                               delay 10 ms;
+      EVNT_SPECIAL_COMMAND                               delay 10 ms;
+   }
+   Diag_request {
+      MasterReq                                          delay 10 ms;
+   }
+   Diag_response {
+      SlaveResp                                          delay 10 ms;
+   }
+}
+/* ----------SIGNAL ENCODDING DEFINITIONS---------- */
+Signal_encoding_types {
+   ADDr_Sig_Type {
+      logical_value,31,"Rear_Center_LH_Left/Right_Actuator";
+      logical_value,32,"Rear_Center_LH_Up/Down_Actuator";
+      logical_value,33,"Rear-Center_RH_Left/Right_Actuator";
+      logical_value,34,"Rear_Center_RH_Up/Down_Actuator";
+   }
+   Broad_Sig_Type {
+      logical_value,0,"Broadcast";
+      logical_value,1,"Unicast";
+   }
+   ElDef_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"Electrical_Defect";
+   }
+   OPEN1_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"Motor_Coil_A_Open";
+   }
+   OPEN2_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"Motor_Coil_B_Open";
+   }
+   OVC1_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"Motor_Coil_A_Short";
+   }
+   OVC2_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"Motor_Coil_B_Short";
+   }
+   OV_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"Over_Voltage";
+   }
+   OpDone_Sig_Type {
+      logical_value,0,"Moving";
+      logical_value,1,"Destination";
+   }
+   REAR_LH_SPEED_Sig_Type {
+      logical_value,0,"Level 0 (0 rpm)";
+      logical_value,1,"Level 1 (1 rpm)";
+      logical_value,2,"Level 2 (2 rpm)";
+      logical_value,3,"Level 3 (3 rpm)";
+      logical_value,4,"Level 4 (4 rpm)";
+      logical_value,5,"Level 5 (5 rpm)";
+      logical_value,6,"Level 6 (6 rpm)";
+      logical_value,7,"Level 7 (7 rpm)";
+      logical_value,8,"Level 8 (8 rpm)";
+      logical_value,9,"Level 9 (9 rpm)";
+      logical_value,10,"Level 10 (10 rpm)";
+   }
+   REAR_RH_SPEED_Sig_Type {
+      logical_value,0,"Level 0 (0 rpm)";
+      logical_value,1,"Level 1 (1 rpm)";
+      logical_value,2,"Level 2 (2 rpm)";
+      logical_value,3,"Level 3 (3 rpm)";
+      logical_value,4,"Level 4 (4 rpm)";
+      logical_value,5,"Level 5 (5 rpm)";
+      logical_value,6,"Level 6 (6 rpm)";
+      logical_value,7,"Level 7 (7 rpm)";
+      logical_value,8,"Level 8 (8 rpm)";
+      logical_value,9,"Level 9 (9 rpm)";
+      logical_value,10,"Level 10 (10 rpm)";
+   }
+   SPECIAL_CMD_Type {
+      logical_value,85,"Hard Stop";
+   }
+   SPEED_Sig_Type {
+      logical_value,0,"Level 0 (0 rpm)";
+      logical_value,1,"Level 1 (1 rpm)";
+      logical_value,2,"Level 2 (2 rpm)";
+      logical_value,3,"Level 3 (3 rpm)";
+      logical_value,4,"Level 4 (4 rpm)";
+      logical_value,5,"Level 5 (5 rpm)";
+      logical_value,6,"Level 6 (6 rpm)";
+      logical_value,7,"Level 7 (7 rpm)";
+      logical_value,8,"Level 8 (8 rpm)";
+      logical_value,9,"Level 9 (9 rpm)";
+      logical_value,10,"Level 10 (10 rpm)";
+   }
+   STAUTS_Sig_Type {
+      logical_value,0,"No_error";
+      logical_value,1,"Error";
+   }
+   Sensor_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"Sensor_Error";
+   }
+   Steploss_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"Steploss";
+   }
+   TSD_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"TSD_Thermal Shutdown";
+   }
+   TW_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"TW_Thermal Shutdown";
+   }
+   Tinfo_Sig_Type {
+      logical_value,0,"Normal_temperature ";
+      logical_value,1,"Low_temperature ";
+      logical_value,2,"High_temperature ";
+      logical_value,3,"Not_Use";
+   }
+   UV_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"Under_Voltage";
+   }
+   VddReset_Sig_Type {
+      logical_value,0,"Normal_state";
+      logical_value,1,"Power ON Reset";
+   }
+}
+/* ----------SIGNAL REPRESENTATION DEFINITIONS---------- */
+Signal_representation {
+   ADDr_Sig_Type:EVNT_ADDr;
+   Broad_Sig_Type:EVNT_Broad;
+   ElDef_Sig_Type:RR_CLLR_EIDef,RR_CRLR_EIDef,RR_CLUD_EIDef,RR_CRUD_EIDef;
+   OPEN1_Sig_Type:RR_CLLR_OPEN1,RR_CRLR_OPEN1,RR_CLUD_OPEN1,RR_CRUD_OPEN1;
+   OPEN2_Sig_Type:RR_CLLR_OPEN2,RR_CRLR_OPEN2,RR_CLUD_OPEN2,RR_CRUD_OPEN2;
+   OVC1_Sig_Type:RR_CLLR_OVC1,RR_CRLR_OVC1,RR_CLUD_OVC1,RR_CRUD_OVC1;
+   OVC2_Sig_Type:RR_CLLR_OVC2,RR_CRLR_OVC2,RR_CLUD_OVC2,RR_CRUD_OVC2;
+   OV_Sig_Type:RR_CLLR_OV,RR_CRLR_OV,RR_CLUD_OV,RR_CRUD_OV;
+   OpDone_Sig_Type:RR_CLLR_OpDone,RR_CRLR_OpDone,RR_CLUD_OpDone,RR_CRUD_OpDone;
+   REAR_LH_SPEED_Sig_Type:EVNT_REAR_LH_SPEED;
+   REAR_RH_SPEED_Sig_Type:EVNT_REAR_RH_SPEED;
+   SPECIAL_CMD_Type:EVNT_CMD;
+   SPEED_Sig_Type:RR_CLLR_SPEED,RR_CRLR_SPEED,RR_CLUD_SPEED,RR_CRUD_SPEED;
+   STAUTS_Sig_Type:RR_CLLR_STATE,RR_CRLR_STATE,RR_CLUD_STATE,RR_CRUD_STATE;
+   Sensor_Sig_Type:RR_CLLR_Sensor,RR_CRLR_Sensor,RR_CLUD_Sensor,RR_CRUD_Sensor;
+   Steploss_Sig_Type:RR_CLLR_Steploss,RR_CRLR_Steploss,RR_CLUD_Steploss,RR_CRUD_Steploss;
+   TSD_Sig_Type:RR_CLLR_TSD,RR_CRLR_TSD,RR_CLUD_TSD,RR_CRUD_TSD;
+   TW_Sig_Type:RR_CLLR_TW,RR_CRLR_TW,RR_CLUD_TW,RR_CRUD_TW;
+   Tinfo_Sig_Type:RR_CLLR_Tinfo,RR_CRLR_Tinfo,RR_CLUD_Tinfo,RR_CRUD_Tinfo;
+   UV_Sig_Type:RR_CLLR_UV,RR_CRLR_UV,RR_CLUD_UV,RR_CRUD_UV;
+   VddReset_Sig_Type:RR_CLLR_VddReset,RR_CRLR_VddReset,RR_CLUD_VddReset,RR_CRUD_VddReset;
+}
+

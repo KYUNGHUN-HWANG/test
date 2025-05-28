@@ -1,0 +1,322 @@
+/*---------GLOBAL DEFINITIONS-----------*/
+LIN_description_file;
+LIN_protocol_version             = "2.2";
+LIN_language_version             = "2.2";
+LIN_speed                        = 19.2 kbps;
+/* ----------NODE DEFINITIONS---------- */
+Nodes {
+   Master:
+      EVNT,                                                  /* Master node name */
+      5 ms,                                                  /* Time base */
+      0.1 ms;                                                /* Jitter */
+   Slaves:
+      FR_SLLR,
+      FR_SLUD,
+      FR_CLLR,
+      FR_CLUD;
+}
+/* ----------SIGNAL DEFINITIONS---------- */
+Signals {
+   /* Signal_name                : Size,                              Init,            Publisher, Subscriber(s) */
+   EVNT_ADDr                     :  7,                                0x11,                 EVNT, FR_SLLR,FR_SLUD,FR_CLLR,FR_CLUD;
+   EVNT_Broad                    :  1,                                0x00,                 EVNT, FR_SLLR,FR_SLUD,FR_CLLR,FR_CLUD;
+   EVNT_SPEED                    :  4,                                0x00,                 EVNT, FR_SLLR,FR_SLUD,FR_CLLR,FR_CLUD;
+   EVNT_CMD                      :  8,                                0x55,                 EVNT, FR_SLLR,FR_SLUD,FR_CLLR,FR_CLUD;
+   EVNT_Front_Side_LH_LeftRight_TargetPosition: 12,                                0x00,                 EVNT, FR_SLLR;
+   EVNT_Front_Side_LH_UpDown_TargetPosition: 12,                                0x00,                 EVNT, FR_SLUD;
+   EVNT_Front_Center_LH_LeftRight_TargetPosition: 12,                                0x00,                 EVNT, FR_CLLR;
+   EVNT_Front_Center_LH_UpDown_TargetPosition: 12,                                0x00,                 EVNT, FR_CLUD;
+   FR_SLLR_SPEED                 :  4,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_OpDone                :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_STATE                 :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_ActuatorState         : 12,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_VddReset              :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_Steploss              :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_EIDef                 :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_TSD                   :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_TW                    :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_Tinfo                 :  2,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_Sensor                :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_OV                    :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_UV                    :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_OPEN2                 :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_OPEN1                 :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_OVC2                  :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_SLLR_OVC1                  :  1,                                0x00,              FR_SLLR, EVNT;
+   FR_CLLR_SPEED                 :  4,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_OpDone                :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_STATE                 :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_ActuatorState         : 12,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_VddReset              :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_Steploss              :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_EIDef                 :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_TSD                   :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_TW                    :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_Tinfo                 :  2,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_Sensor                :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_OV                    :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_UV                    :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_OPEN2                 :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_OPEN1                 :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_OVC2                  :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_CLLR_OVC1                  :  1,                                0x00,              FR_CLLR, EVNT;
+   FR_SLUD_SPEED                 :  4,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_OpDone                :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_STATE                 :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_ActuatorState         : 12,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_VddReset              :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_Steploss              :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_EIDef                 :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_TSD                   :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_TW                    :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_Tinfo                 :  2,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_Sensor                :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_OV                    :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_UV                    :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_OPEN2                 :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_OPEN1                 :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_OVC2                  :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_SLUD_OVC1                  :  1,                                0x00,              FR_SLUD, EVNT;
+   FR_CLUD_SPEED                 :  4,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_OpDone                :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_STATE                 :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_ActuatorState         : 12,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_VddReset              :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_Steploss              :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_EIDef                 :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_TSD                   :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_TW                    :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_Tinfo                 :  2,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_Sensor                :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_OV                    :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_UV                    :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_OPEN2                 :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_OPEN1                 :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_OVC2                  :  1,                                0x00,              FR_CLUD, EVNT;
+   FR_CLUD_OVC1                  :  1,                                0x00,              FR_CLUD, EVNT;
+}
+/* ----------DIAGNOSTIC SIGNAL DEFINITIONS---------- */
+Diagnostic_signals {
+   /* MasterReq Reserved Signals */
+   MasterReqB0         :    8,   0;
+   MasterReqB1         :    8,   0;
+   MasterReqB2         :    8,   0;
+   MasterReqB3         :    8,   0;
+   MasterReqB4         :    8,   0;
+   MasterReqB5         :    8,   0;
+   MasterReqB6         :    8,   0;
+   MasterReqB7         :    8,   0;
+   /* SlaveResp Reserved Signals */
+   SlaveRespB0         :    8,   0;
+   SlaveRespB1         :    8,   0;
+   SlaveRespB2         :    8,   0;
+   SlaveRespB3         :    8,   0;
+   SlaveRespB4         :    8,   0;
+   SlaveRespB5         :    8,   0;
+   SlaveRespB6         :    8,   0;
+   SlaveRespB7         :    8,   0;
+}
+/* ----------UNCONDITIONAL FRAME DEFINITIONS---------- */
+Frames {
+   EVNT_MASTER_COMMAND : 0x11, EVNT                ,    8 {
+      EVNT_ADDr           , 0;
+      EVNT_Broad          , 7;
+      EVNT_SPEED          , 8;
+      EVNT_Front_Side_LH_LeftRight_TargetPosition, 12;
+      EVNT_Front_Side_LH_UpDown_TargetPosition, 24;
+      EVNT_Front_Center_LH_LeftRight_TargetPosition, 36;
+      EVNT_Front_Center_LH_UpDown_TargetPosition, 48;
+   }
+   FR_SLLR_STATUS      : 0x12, FR_SLLR             ,    4 {
+      FR_SLLR_SPEED       , 0;
+      FR_SLLR_ActuatorState, 4;
+      FR_SLLR_OpDone      , 16;
+      FR_SLLR_VddReset    , 17;
+      FR_SLLR_Steploss    , 18;
+      FR_SLLR_EIDef       , 19;
+      FR_SLLR_TSD         , 20;
+      FR_SLLR_TW          , 21;
+      FR_SLLR_Tinfo       , 22;
+      FR_SLLR_STATE       , 24;
+      FR_SLLR_Sensor      , 25;
+      FR_SLLR_OV          , 26;
+      FR_SLLR_UV          , 27;
+      FR_SLLR_OPEN2       , 28;
+      FR_SLLR_OPEN1       , 29;
+      FR_SLLR_OVC2        , 30;
+      FR_SLLR_OVC1        , 31;
+   }
+   FR_SLUD_STATUS      : 0x13, FR_SLUD             ,    4 {
+      FR_SLUD_SPEED       , 0;
+      FR_SLUD_ActuatorState, 4;
+      FR_SLUD_OpDone      , 16;
+      FR_SLUD_VddReset    , 17;
+      FR_SLUD_Steploss    , 18;
+      FR_SLUD_EIDef       , 19;
+      FR_SLUD_TSD         , 20;
+      FR_SLUD_TW          , 21;
+      FR_SLUD_Tinfo       , 22;
+      FR_SLUD_STATE       , 24;
+      FR_SLUD_Sensor      , 25;
+      FR_SLUD_OV          , 26;
+      FR_SLUD_UV          , 27;
+      FR_SLUD_OPEN2       , 28;
+      FR_SLUD_OPEN1       , 29;
+      FR_SLUD_OVC2        , 30;
+      FR_SLUD_OVC1        , 31;
+   }
+   FR_CLLR_STATUS      : 0x14, FR_CLLR             ,    4 {
+      FR_CLLR_SPEED       , 0;
+      FR_CLLR_ActuatorState, 4;
+      FR_CLLR_OpDone      , 16;
+      FR_CLLR_VddReset    , 17;
+      FR_CLLR_Steploss    , 18;
+      FR_CLLR_EIDef       , 19;
+      FR_CLLR_TSD         , 20;
+      FR_CLLR_TW          , 21;
+      FR_CLLR_Tinfo       , 22;
+      FR_CLLR_STATE       , 24;
+      FR_CLLR_Sensor      , 25;
+      FR_CLLR_OV          , 26;
+      FR_CLLR_UV          , 27;
+      FR_CLLR_OPEN2       , 28;
+      FR_CLLR_OPEN1       , 29;
+      FR_CLLR_OVC2        , 30;
+      FR_CLLR_OVC1        , 31;
+   }
+   FR_CLUD_STATUS      : 0x15, FR_CLUD             ,    4 {
+      FR_CLUD_SPEED       , 0;
+      FR_CLUD_ActuatorState, 4;
+      FR_CLUD_OpDone      , 16;
+      FR_CLUD_VddReset    , 17;
+      FR_CLUD_Steploss    , 18;
+      FR_CLUD_EIDef       , 19;
+      FR_CLUD_TSD         , 20;
+      FR_CLUD_TW          , 21;
+      FR_CLUD_Tinfo       , 22;
+      FR_CLUD_STATE       , 24;
+      FR_CLUD_Sensor      , 25;
+      FR_CLUD_OV          , 26;
+      FR_CLUD_UV          , 27;
+      FR_CLUD_OPEN2       , 28;
+      FR_CLUD_OPEN1       , 29;
+      FR_CLUD_OVC2        , 30;
+      FR_CLUD_OVC1        , 31;
+   }
+   EVNT_SPECIAL_COMMAND: 0x00, EVNT                ,    2 {
+      EVNT_CMD            , 0;
+      EVNT_ADDr           , 8;
+      EVNT_Broad          , 15;
+   }
+}
+/* ----------DIAGNOSTIC FRAME DEFINITIONS---------- */
+Diagnostic_frames {
+   MasterReq           : 0x3C {
+      MasterReqB0         , 0;
+      MasterReqB1         , 8;
+      MasterReqB2         , 16;
+      MasterReqB3         , 24;
+      MasterReqB4         , 32;
+      MasterReqB5         , 40;
+      MasterReqB6         , 48;
+      MasterReqB7         , 56;
+   }
+   SlaveResp           : 0x3D {
+      SlaveRespB0         , 0;
+      SlaveRespB1         , 8;
+      SlaveRespB2         , 16;
+      SlaveRespB3         , 24;
+      SlaveRespB4         , 32;
+      SlaveRespB5         , 40;
+      SlaveRespB6         , 48;
+      SlaveRespB7         , 56;
+   }
+}
+/* ----------NODE ATTRIBUTE DEFINITIONS---------- */
+Node_attributes {
+   FR_SLLR {
+      LIN_protocol               = "2.2";                    /* Node protocol version */
+      configured_NAD             = 0x11;                     /* configured NAD of node */
+      initial_NAD                = 0x11;                     /* initial NAD of node */
+      product_id                 = 0x0115, 0x1100, 0xFF;     /* Product id */
+      response_error             = FR_SLLR_STATE;            /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 0 ms;                     /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         EVNT_MASTER_COMMAND;
+         FR_SLLR_STATUS;
+         EVNT_SPECIAL_COMMAND;
+      }
+   }
+   FR_SLUD {
+      LIN_protocol               = "2.2";                    /* Node protocol version */
+      configured_NAD             = 0x12;                     /* configured NAD of node */
+      initial_NAD                = 0x12;                     /* initial NAD of node */
+      product_id                 = 0x0115, 0x1100, 0xFF;     /* Product id */
+      response_error             = FR_SLUD_STATE;            /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 0 ms;                     /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         EVNT_MASTER_COMMAND;
+         FR_SLUD_STATUS;
+         EVNT_SPECIAL_COMMAND;
+      }
+   }
+   FR_CLLR {
+      LIN_protocol               = "2.2";                    /* Node protocol version */
+      configured_NAD             = 0x13;                     /* configured NAD of node */
+      initial_NAD                = 0x13;                     /* initial NAD of node */
+      product_id                 = 0x0115, 0x1100, 0xFF;     /* Product id */
+      response_error             = FR_CLLR_STATE;            /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 0 ms;                     /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         EVNT_MASTER_COMMAND;
+         FR_CLLR_STATUS;
+         EVNT_SPECIAL_COMMAND;
+      }
+   }
+   FR_CLUD {
+      LIN_protocol               = "2.2";                    /* Node protocol version */
+      configured_NAD             = 0x14;                     /* configured NAD of node */
+      initial_NAD                = 0x14;                     /* initial NAD of node */
+      product_id                 = 0x0115, 0x1100, 0xFF;     /* Product id */
+      response_error             = FR_CLUD_STATE;            /* Response error signal */
+      P2_min                     = 50 ms;                    /* P2_min */
+      ST_min                     = 0 ms;                     /* ST_min */
+      N_As_timeout               = 1000 ms;                  /* N_As_timeout */
+      N_Cr_timeout               = 1000 ms;                  /* N_As_timeout */
+      configurable_frames {
+         EVNT_MASTER_COMMAND;
+         FR_CLUD_STATUS;
+         EVNT_SPECIAL_COMMAND;
+      }
+   }
+}
+/* ----------SCHEDULE TABLE DEFINITIONS---------- */
+Schedule_tables {
+   SCHEDULER_EVNT_NORMAL_FR_DRV {
+      EVNT_MASTER_COMMAND                                delay 10 ms;
+      FR_SLLR_STATUS                                     delay 10 ms;
+      FR_SLUD_STATUS                                     delay 10 ms;
+      FR_CLLR_STATUS                                     delay 10 ms;
+      FR_CLUD_STATUS                                     delay 10 ms;
+   }
+   SCHEDULER_EVNT_SPECIAL_CMD_FR_DRV {
+      EVNT_SPECIAL_COMMAND                               delay 10 ms;
+      EVNT_SPECIAL_COMMAND                               delay 10 ms;
+   }
+   Diag_request {
+      MasterReq                                          delay 10 ms;
+   }
+   Diag_response {
+      SlaveResp                                          delay 10 ms;
+   }
+}
+

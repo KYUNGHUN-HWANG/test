@@ -1,0 +1,19 @@
+---- lin_Write_FrDrEVntPt_XY Matches (18 in 3 files) ----
+lin_FrDrPsSwingData_Scenario0 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrPsSwingData_Scenario1 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrPsSwingData_Scenario2 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrPsSwingData_Scenario3 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrPsSwingData_Scenario4 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrPsSwingData_Scenario5 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrSwingData_Scenario0 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrSwingData_Scenario1 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrSwingData_Scenario2 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrSwingData_Scenario3 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrSwingData_Scenario4 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrSwingData_Scenario5 in Amo_Cycle.c (Sources\Amosense\src) : 	lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+Amo_LIN.c (Sources\Amosense\src) line 197 : void lin_Write_FrDrEVntPt_XY(lin_LH_EVNT_MASTER_CMD_11 *lin_Ctrl)
+lin_FrDrmanualMode_task in Amo_LIN.c (Sources\Amosense\src) : 		lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrVentMode_task in Amo_LIN.c (Sources\Amosense\src) : 		lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+lin_FrDrVentMode_task_1 in Amo_LIN.c (Sources\Amosense\src) : 		lin_Write_FrDrEVntPt_XY(&LIN_LH_EVNT_MASTER_CMD);
+Amo_LIN.h (Sources\Amosense\inc) line 631 : void lin_Write_FrDrEVntPt_XY(lin_LH_EVNT_MASTER_CMD_11 *lin_Ctrl);
+Amo_LIN.h (Sources\Amosense\inc) line 712 : extern void lin_Write_FrDrEVntPt_XY(lin_LH_EVNT_MASTER_CMD_11 *lin_Ctrl);

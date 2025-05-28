@@ -1,0 +1,14 @@
+# !SESSION 2024-11-06 13:25:32.528
+# version: 1.1
+# verbose: true
+# The following option strings are specified for this debug session:
+# 	null
+| main | 2024-11-06 13:25:32.528 | com.iar.ide.common | /debug | com.iar.ide.common.PlatformLoggerDelegate | traceFile | 74 | com.iar.ide.debugger.timeline.service INFO Timeline data source providers found: [com.iar.ide.debugger.timeline.service.TimelineServiceDataSourceProvider@bc488d] |
+| Worker-14 | 2024-11-06 13:33:29.272 | com.iar.ide.common | /debug | com.iar.ide.common.PlatformLoggerDelegate | traceFile | 74 | com.iar.ide.common INFO Path to EW stage not found for provider iar.sdkprovider.arm.v8. Requesting a settings dialog to be displayed... |
+| Worker-14 | 2024-11-06 13:33:38.225 | com.iar.ide.common | /debug | com.iar.ide.common.PlatformLoggerDelegate | traceFile | 74 | com.iar.ide.common ERROR Path to EW has not been specified for provider iar.sdkprovider.arm.v8. The C-SPY plugins will not function properly. |
+| Worker-14 | 2024-11-06 13:33:38.231 | com.iar.ide.common | /debug | com.iar.ide.common.PlatformLoggerDelegate | traceFile | 74 | com.iar.cdt.project.utils ERROR SDK location does not exist: \arm |
+| Worker-14 | 2024-11-06 13:33:38.235 | com.iar.ide.common | /debug | com.iar.ide.common.PlatformLoggerDelegate | traceFile | 74 | com.iar.ide.common ERROR Failed to create provider for (arm, 8.30.0). The SDK is disabled. |
+| Worker-35 | 2024-11-06 13:33:38.238 | com.iar.ide.common | /debug | com.iar.ide.common.PlatformLoggerDelegate | traceFile | 74 | com.iar.cdt.arm.v7.toolchain INFO Enabling Cortex-*F workaround (ECL-1993) for EWARM 7.40.3 |
+| Worker-33 | 2024-11-06 13:33:38.242 | com.iar.ide.common | /debug | com.iar.ide.common.PlatformLoggerDelegate | traceFile | 74 | com.iar.ide.common ERROR The provider for (arm, 8.30.0) failed to initialize and cannot be used. |
+| Worker-32 | 2024-11-06 13:33:38.243 | com.iar.ide.common | /debug | com.iar.ide.common.PlatformLoggerDelegate | traceFile | 74 | com.iar.ide.common ERROR The provider for (arm, 8.30.0) failed to initialize and cannot be used. |
+| Worker-13 | 2024-11-06 13:33:38.244 | com.iar.ide.common | /debug | com.iar.ide.common.PlatformLoggerDelegate | traceFile | 74 | com.iar.ide.common ERROR The provider for (arm, 8.30.0) failed to initialize and cannot be used. |

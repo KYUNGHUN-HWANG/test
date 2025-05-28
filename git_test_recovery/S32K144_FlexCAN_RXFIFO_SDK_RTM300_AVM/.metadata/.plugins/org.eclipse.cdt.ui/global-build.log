@@ -1,0 +1,154 @@
+14:53:47 **** Clean-only build of configuration Debug for project S32K144_FlexCAN_RXFIFO_SDK_RTM300 ****
+make -j12 clean 
+rm -rf ./*
+ 
+14:53:48 **** Build of configuration Debug for project S32K144_FlexCAN_RXFIFO_SDK_RTM300 ****
+make -j12 all 
+Building file: ../Sources/main.c
+Building file: ../SDK/rtos/osif/osif_baremetal.c
+Building file: ../SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Sources/main.args" -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -o "Sources/main.o" "../Sources/main.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/rtos/osif/osif_baremetal.args" -MMD -MP -MF"SDK/rtos/osif/osif_baremetal.d" -MT"SDK/rtos/osif/osif_baremetal.o" -o "SDK/rtos/osif/osif_baremetal.o" "../SDK/rtos/osif/osif_baremetal.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.args" -MMD -MP -MF"SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.d" -MT"SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o" -o "SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.o" "../SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.c"
+Building file: ../SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.c
+Building file: ../SDK/platform/drivers/src/power/power_manager.c
+Invoking: Standard S32DS C Compiler
+Building file: ../SDK/platform/drivers/src/pins/pins_driver.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.args" -MMD -MP -MF"SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.d" -MT"SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.o" -o "SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.o" "../SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.c"
+Invoking: Standard S32DS C Compiler
+../Sources/main.c: In function 'main':
+arm-none-eabi-gcc "@SDK/platform/drivers/src/power/power_manager.args" -MMD -MP -MF"SDK/platform/drivers/src/power/power_manager.d" -MT"SDK/platform/drivers/src/power/power_manager.o" -o "SDK/platform/drivers/src/power/power_manager.o" "../SDK/platform/drivers/src/power/power_manager.c"
+../Sources/main.c:339:49: warning: passing argument 2 of 'FLEXCAN_DRV_InstallEventCallback' from incompatible pointer type [-Wincompatible-pointer-types]
+Invoking: Standard S32DS C Compiler
+  FLEXCAN_DRV_InstallEventCallback(INST_CANCOM1, flexcan0_Callback, NULL);
+                                                 ^~~~~~~~~~~~~~~~~
+In file included from D:/3.CodingWorks/S32_Arm/using_SDK/S32K144_FlexCAN_RXFIFO_SDK_RTM300/Generated_Code/Cpu.h:64:0,
+                 from ../Sources/main.c:27:
+C:/NXP/S32DS_ARM_v2.2/S32DS/software/S32SDK_S32K1xx_RTM_3.0.0/platform/drivers/inc/flexcan_driver.h:850:6: note: expected 'flexcan_callback_t {aka void (*)(unsigned char,  enum <anonymous>,  long unsigned int,  struct FlexCANState *)}' but argument is of type 'void (*)(uint8_t,  flexcan_event_type_t,  flexcan_state_t *) {aka void (*)(unsigned char,  enum <anonymous>,  struct FlexCANState *)}'
+arm-none-eabi-gcc "@SDK/platform/drivers/src/pins/pins_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/pins/pins_driver.d" -MT"SDK/platform/drivers/src/pins/pins_driver.o" -o "SDK/platform/drivers/src/pins/pins_driver.o" "../SDK/platform/drivers/src/pins/pins_driver.c"
+Building file: ../SDK/platform/drivers/src/pins/pins_port_hw_access.c
+ void FLEXCAN_DRV_InstallEventCallback(uint8_t instance,
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/pins/pins_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/pins/pins_port_hw_access.d" -MT"SDK/platform/drivers/src/pins/pins_port_hw_access.o" -o "SDK/platform/drivers/src/pins/pins_port_hw_access.o" "../SDK/platform/drivers/src/pins/pins_port_hw_access.c"
+Building file: ../SDK/platform/drivers/src/interrupt/interrupt_manager.c
+Finished building: ../Sources/main.c
+Finished building: ../SDK/rtos/osif/osif_baremetal.c
+Finished building: ../SDK/platform/drivers/src/power/S32K1xx/power_manager_S32K1xx.c
+ 
+ 
+ 
+Finished building: ../SDK/platform/drivers/src/power/S32K1xx/power_smc_hw_access.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/interrupt/interrupt_manager.args" -MMD -MP -MF"SDK/platform/drivers/src/interrupt/interrupt_manager.d" -MT"SDK/platform/drivers/src/interrupt/interrupt_manager.o" -o "SDK/platform/drivers/src/interrupt/interrupt_manager.o" "../SDK/platform/drivers/src/interrupt/interrupt_manager.c"
+Finished building: ../SDK/platform/drivers/src/power/power_manager.c
+ 
+ 
+Finished building: ../SDK/platform/drivers/src/pins/pins_driver.c
+Finished building: ../SDK/platform/drivers/src/pins/pins_port_hw_access.c
+Building file: ../SDK/platform/drivers/src/flexcan/flexcan_driver.c
+ 
+ 
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/flexcan/flexcan_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/flexcan/flexcan_driver.d" -MT"SDK/platform/drivers/src/flexcan/flexcan_driver.o" -o "SDK/platform/drivers/src/flexcan/flexcan_driver.o" "../SDK/platform/drivers/src/flexcan/flexcan_driver.c"
+Building file: ../SDK/platform/drivers/src/flexcan/flexcan_hw_access.c
+Building file: ../SDK/platform/drivers/src/flexcan/flexcan_irq.c
+Invoking: Standard S32DS C Compiler
+Invoking: Standard S32DS C Compiler
+Building file: ../SDK/platform/drivers/src/edma/edma_driver.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/flexcan/flexcan_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/flexcan/flexcan_hw_access.d" -MT"SDK/platform/drivers/src/flexcan/flexcan_hw_access.o" -o "SDK/platform/drivers/src/flexcan/flexcan_hw_access.o" "../SDK/platform/drivers/src/flexcan/flexcan_hw_access.c"
+Finished building: ../SDK/platform/drivers/src/interrupt/interrupt_manager.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/flexcan/flexcan_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/flexcan/flexcan_irq.d" -MT"SDK/platform/drivers/src/flexcan/flexcan_irq.o" -o "SDK/platform/drivers/src/flexcan/flexcan_irq.o" "../SDK/platform/drivers/src/flexcan/flexcan_irq.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/edma/edma_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/edma/edma_driver.d" -MT"SDK/platform/drivers/src/edma/edma_driver.o" -o "SDK/platform/drivers/src/edma/edma_driver.o" "../SDK/platform/drivers/src/edma/edma_driver.c"
+ 
+Building file: ../SDK/platform/drivers/src/edma/edma_hw_access.c
+Building file: ../SDK/platform/drivers/src/edma/edma_irq.c
+Invoking: Standard S32DS C Compiler
+Building file: ../SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/edma/edma_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/edma/edma_hw_access.d" -MT"SDK/platform/drivers/src/edma/edma_hw_access.o" -o "SDK/platform/drivers/src/edma/edma_hw_access.o" "../SDK/platform/drivers/src/edma/edma_hw_access.c"
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/drivers/src/edma/edma_driver.args" -MMD -MP -MF"SDK/platform/drivers/src/edma/edma_irq.d" -MT"SDK/platform/drivers/src/edma/edma_irq.o" -o "SDK/platform/drivers/src/edma/edma_irq.o" "../SDK/platform/drivers/src/edma/edma_irq.c"
+Invoking: Standard S32DS C Compiler
+Building file: ../SDK/platform/devices/S32K144/startup/system_S32K144.c
+arm-none-eabi-gcc "@SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.args" -MMD -MP -MF"SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.d" -MT"SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o" -o "SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.o" "../SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.c"
+Finished building: ../SDK/platform/drivers/src/flexcan/flexcan_driver.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/devices/S32K144/startup/system_S32K144.args" -MMD -MP -MF"SDK/platform/devices/S32K144/startup/system_S32K144.d" -MT"SDK/platform/devices/S32K144/startup/system_S32K144.o" -o "SDK/platform/devices/S32K144/startup/system_S32K144.o" "../SDK/platform/devices/S32K144/startup/system_S32K144.c"
+Finished building: ../SDK/platform/drivers/src/flexcan/flexcan_hw_access.c
+Finished building: ../SDK/platform/drivers/src/flexcan/flexcan_irq.c
+ 
+ 
+Finished building: ../SDK/platform/drivers/src/edma/edma_driver.c
+ 
+Finished building: ../SDK/platform/drivers/src/edma/edma_hw_access.c
+ 
+Finished building: ../SDK/platform/drivers/src/edma/edma_irq.c
+ 
+Building file: ../SDK/platform/devices/startup.c
+ 
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@SDK/platform/devices/startup.args" -MMD -MP -MF"SDK/platform/devices/startup.d" -MT"SDK/platform/devices/startup.o" -o "SDK/platform/devices/startup.o" "../SDK/platform/devices/startup.c"
+Building file: ../Project_Settings/Startup_Code/startup_S32K144.S
+Finished building: ../SDK/platform/devices/S32K144/startup/system_S32K144.c
+Invoking: Standard S32DS Assembler
+arm-none-eabi-gcc "@Project_Settings/Startup_Code/startup_S32K144.args" -o "Project_Settings/Startup_Code/startup_S32K144.o" "../Project_Settings/Startup_Code/startup_S32K144.S"
+Finished building: ../SDK/platform/drivers/src/clock/S32K1xx/clock_S32K1xx.c
+ 
+ 
+Building file: ../Generated_Code/Cpu.c
+Building file: ../Generated_Code/canCom1.c
+Building file: ../Generated_Code/clockMan1.c
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/Cpu.d" -MT"Generated_Code/Cpu.o" -o "Generated_Code/Cpu.o" "../Generated_Code/Cpu.c"
+Invoking: Standard S32DS C Compiler
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/clockMan1.d" -MT"Generated_Code/clockMan1.o" -o "Generated_Code/clockMan1.o" "../Generated_Code/clockMan1.c"
+Finished building: ../SDK/platform/devices/startup.c
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/canCom1.d" -MT"Generated_Code/canCom1.o" -o "Generated_Code/canCom1.o" "../Generated_Code/canCom1.c"
+Finished building: ../Project_Settings/Startup_Code/startup_S32K144.S
+ 
+ 
+Building file: ../Generated_Code/dmaController1.c
+Building file: ../Generated_Code/pin_mux.c
+Invoking: Standard S32DS C Compiler
+Building file: ../Generated_Code/pwrMan1.c
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/dmaController1.d" -MT"Generated_Code/dmaController1.o" -o "Generated_Code/dmaController1.o" "../Generated_Code/dmaController1.c"
+Invoking: Standard S32DS C Compiler
+Invoking: Standard S32DS C Compiler
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/pin_mux.d" -MT"Generated_Code/pin_mux.o" -o "Generated_Code/pin_mux.o" "../Generated_Code/pin_mux.c"
+Finished building: ../Generated_Code/Cpu.c
+arm-none-eabi-gcc "@Generated_Code/Cpu.args" -MMD -MP -MF"Generated_Code/pwrMan1.d" -MT"Generated_Code/pwrMan1.o" -o "Generated_Code/pwrMan1.o" "../Generated_Code/pwrMan1.c"
+Finished building: ../Generated_Code/clockMan1.c
+ 
+Finished building: ../Generated_Code/canCom1.c
+ 
+ 
+Finished building: ../Generated_Code/dmaController1.c
+Finished building: ../Generated_Code/pin_mux.c
+ 
+ 
+Finished building: ../Generated_Code/pwrMan1.c
+ 
+Building target: S32K144_FlexCAN_RXFIFO_SDK_RTM300.elf
+Invoking: Standard S32DS C Linker
+arm-none-eabi-gcc -o "S32K144_FlexCAN_RXFIFO_SDK_RTM300.elf" "@S32K144_FlexCAN_RXFIFO_SDK_RTM300.args"   
+Finished building target: S32K144_FlexCAN_RXFIFO_SDK_RTM300.elf
+ 
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley S32K144_FlexCAN_RXFIFO_SDK_RTM300.elf
+   text	   data	    bss	    dec	    hex	filename
+  30108	    636	   3816	  34560	   8700	S32K144_FlexCAN_RXFIFO_SDK_RTM300.elf
+Finished building: S32K144_FlexCAN_RXFIFO_SDK_RTM300.siz
+ 
+14:54:46 **** Incremental Build of configuration Debug for project S32K144_FlexCAN_RXFIFO_SDK_RTM300 ****
+make -j12 all 
+Invoking: Standard S32DS Print Size
+arm-none-eabi-size --format=berkeley S32K144_FlexCAN_RXFIFO_SDK_RTM300.elf
+   text	   data	    bss	    dec	    hex	filename
+  30108	    636	   3816	  34560	   8700	S32K144_FlexCAN_RXFIFO_SDK_RTM300.elf
+Finished building: S32K144_FlexCAN_RXFIFO_SDK_RTM300.siz
+ 
