@@ -475,7 +475,7 @@ void recovery_mode_check(SlaveId_Flag_t slaveId_flag)
     {
         recovery_mode_step(SLAVE_CLLR, 2U);
     }
-		if((slaveId_flag & SLAVE_CLUD_FLAG) = 0U)
+		if((slaveId_flag & SLAVE_CLUD_FLAG) != 0U)
     {
         recovery_mode_step(SLAVE_CLUD, 2U);
     }
